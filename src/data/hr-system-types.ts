@@ -50,6 +50,7 @@ export type Role =
   | "Recruiter"
   | "Public Relations Specialist"
   // Other
+  | "Faculty Advisor" // a UMD faculty member; distinct from the student Advisor role
   | "Advisor"
   | "Assistant"
   | "Member";
@@ -253,6 +254,7 @@ export interface Membership {
   discord?: string;
   emails: string[];
   github?: string;
+  portfolio?: string; // Personal site, opened from the org chart
   joinDate?: Date;
   createdAt?: Date;
   updatedAt?: Date;
