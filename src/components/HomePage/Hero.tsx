@@ -43,7 +43,6 @@ export default function Hero() {
           style={{
             paddingBottom: "2rem",
             width: "min(450px, 100%)",
-            minWidth: "320px",
           }}
         >
           Empowering students to collaborate, innovate, and grow. Join our

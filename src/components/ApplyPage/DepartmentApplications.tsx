@@ -41,7 +41,8 @@ function DepartmentPanel(props: { data: DepartmentApplicationData }) {
   return (
     <div className="pb-2 space-y-6 text-base">
       {/* Links */}
-      <div className="flex max-xs:flex-col flex-wrap items-start gap-3">
+      {/* px-0.5 keeps the outlined button's edge clear of the panel's overflow clip */}
+      <div className="flex max-xs:flex-col flex-wrap items-start gap-3 px-0.5">
         <a
           href={data.applicationLink}
           target="_blank"

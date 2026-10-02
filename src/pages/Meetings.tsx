@@ -6,7 +6,12 @@ import Footer from "../components/HomePage/Footer";
 
 import { meetingData } from "../data/MeetingData";
 
-const TAG_OPTIONS = ["All", "Department Meeting", "Team Meeting"];
+const TAG_OPTIONS = [
+  "All",
+  "Department Meeting",
+  "Team Meeting",
+  "Client Meeting",
+];
 
 type EventCardProps = {
   day: string;
@@ -137,7 +142,7 @@ export default function Meetings() {
                 placeholder="Search..."
                 value={searchText}
                 onChange={(e) => setSearchText(e.target.value)}
-                className="flex-1 px-3 text-sm outline-none bg-transparent text-gray-700"
+                className="flex-1 min-w-0 px-3 text-sm outline-none bg-transparent text-gray-700"
               />
               <span className="text-gray-400">🔍</span>
             </div>

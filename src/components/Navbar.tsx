@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Members", to: "/members" },
   { label: "Meetings", to: "/meetings" },
   // { label: "Crew", to: "/crew" },
-  // { label: "Projects", to: "/projects" },
+  { label: "Projects", to: "/projects" },
 ];
 
 /** Routes that paint their own dark background, so the navbar inverts to white. */
@@ -54,7 +54,7 @@ export default function Navbar() {
     <div>
       {/* Main bar */}
       <div
-        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-4 px-4 min-[600px]:px-8 transition-colors duration-300"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-4 px-4 min-[800px]:px-8 transition-colors duration-300"
         style={{
           backgroundColor: barSolid ? "hsla(0, 0%, 100%, 0.85)" : "transparent",
           backdropFilter: barSolid ? "blur(8px)" : "none",
@@ -90,7 +90,7 @@ export default function Navbar() {
         {/* Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className={`min-[600px]:hidden bg-transparent border-none cursor-pointer ${
+          className={`min-[800px]:hidden -m-2 p-2 bg-transparent border-none cursor-pointer ${
             onDark ? "text-white" : "text-[hsl(204,98%,15%)]"
           }`}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -137,7 +137,7 @@ export default function Navbar() {
       </div>
 
       {/* Desktop nav */}
-      <nav className="fixed top-0 left-1/2 -translate-x-1/2 z-50 hidden min-[600px]:flex flex-row">
+      <nav className="fixed top-0 left-1/2 -translate-x-1/2 z-50 hidden min-[800px]:flex flex-row">
         {navLinks.map(({ label, to }) => (
           <NavLink key={to} to={to} className={activeLinkClass}>
             {label}
@@ -148,7 +148,7 @@ export default function Navbar() {
       {/* Mobile dropdown */}
       {menuOpen && (
         <div
-          className="fixed left-0 right-0 z-50 flex justify-between min-[600px]:hidden px-4"
+          className="fixed left-0 right-0 z-50 flex flex-col min-[800px]:hidden py-2"
           style={{
             top: "3.5rem",
             backgroundColor: onDark
@@ -167,7 +167,7 @@ export default function Navbar() {
             <NavLink
               key={to}
               to={to}
-              className={activeLinkClass}
+              className={(state) => `${activeLinkClass(state)} block px-6 py-3`}
               onClick={() => setMenuOpen(false)}
             >
               {label}
