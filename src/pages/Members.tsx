@@ -3,6 +3,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import MembersTabs from "../components/MembersTabs";
 import { memberData } from "../data/members/2026W39";
+import { facultyData } from "../data/members/faculty";
+import { portfolioFor } from "../data/members/portfolios";
 import { currentPositions, formatRole } from "../data/hr-system-types";
 import type { Position, Role } from "../data/hr-system-types";
 
@@ -32,6 +34,9 @@ interface Leaf {
   title: string;
   name: string;
   rank: number;
+  /** Portfolio link; the box is only clickable when this is set. */
+  href?: string;
+  faculty: boolean;
 }
 
 interface TreeNode {
@@ -81,6 +86,7 @@ const DEPARTMENT_ORDER = [
 ];
 
 const ROLE_ORDER: Role[] = [
+  "Faculty Advisor",
   "President",
   "Vice President",
   "Head",
@@ -161,7 +167,8 @@ function buildTree(): TreeNode {
   const root = makeNode("root", "Campus Coders Crew", "root");
   const index = new Map<string, TreeNode>([["root", root]]);
 
-  memberData.forEach((member, mi) => {
+  [...facultyData, ...memberData].forEach((member, mi) => {
+    const href = portfolioFor(member);
     currentPositions(member).forEach((position, pi) => {
       let node = root;
       let path = "root";
@@ -180,6 +187,8 @@ function buildTree(): TreeNode {
         title: formatRole(position.role, position.experienceLevel),
         name: member.name,
         rank: orderIndex(ROLE_ORDER, position.role),
+        href,
+        faculty: position.role === "Faculty Advisor",
       });
     });
   });
@@ -262,6 +271,10 @@ function flatten(node: TreeNode, out: TreeNode[] = []): TreeNode[] {
 }
 
 /* ------------------------------------------------------------------ styling */
+
+/* The faculty advisor's box is gold so it reads apart from student roles. */
+const FACULTY_ACCENT = "hsl(43, 90%, 50%)";
+const FACULTY_TEXT = "hsl(36, 85%, 32%)";
 
 const SECTOR_ACCENT: Record<string, string> = {
   "Internal Operations": "hsl(204, 90%, 45%)",
@@ -373,7 +386,15 @@ export default function Members() {
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const pinch = useRef<{ distance: number; x: number; y: number } | null>(null);
 
+  /*
+   * Boxes with a portfolio are links, so a drag that starts on one must not
+   * open it on release. Anything that moves more than a few pixels counts as
+   * a drag, and the click that follows is swallowed.
+   */
+  const dragDistance = useRef(0);
+
   const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    dragDistance.current = 0;
     (event.target as Element).setPointerCapture?.(event.pointerId);
     pointers.current.set(event.pointerId, {
       x: event.clientX,
@@ -397,6 +418,7 @@ export default function Members() {
       const rect = viewportRef.current?.getBoundingClientRect();
       const previousPinch = pinch.current;
       pinch.current = { distance, x: midX, y: midY };
+      dragDistance.current += 100; // a pinch is never a click
       if (previousPinch && rect && previousPinch.distance > 0) {
         const px = midX - rect.left;
         const py = midY - rect.top;
@@ -415,6 +437,7 @@ export default function Members() {
 
     const dx = current.x - previous.x;
     const dy = current.y - previous.y;
+    dragDistance.current += Math.abs(dx) + Math.abs(dy);
     setView((v) => ({ ...v, x: v.x + dx, y: v.y + dy }));
   };
 
@@ -511,6 +534,12 @@ export default function Members() {
           onPointerUp={endPointer}
           onPointerCancel={endPointer}
           onPointerLeave={endPointer}
+          onClickCapture={(event) => {
+            if (dragDistance.current > 5) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+          }}
         >
           <div
             style={{
@@ -593,36 +622,60 @@ export default function Members() {
                         marginTop: CARDS_TOP_GAP,
                       }}
                     >
-                      {node.cards.map((card) => (
-                        <div
-                          key={card.id}
-                          className="flex flex-col justify-center rounded-md bg-white px-2.5 shadow"
-                          style={{
-                            height: CARD_H,
-                            borderLeft: `4px solid ${accent}`,
-                          }}
-                        >
-                          <span
-                            style={{
-                              fontSize: 12,
-                              fontWeight: 700,
-                              color: accent,
-                              lineHeight: 1.15,
-                            }}
+                      {node.cards.map((card) => {
+                        const cardAccent = card.faculty ? FACULTY_ACCENT : accent;
+                        const body = (
+                          <>
+                            <span
+                              style={{
+                                fontSize: 12,
+                                fontWeight: 700,
+                                color: card.faculty ? FACULTY_TEXT : accent,
+                                lineHeight: 1.15,
+                              }}
+                            >
+                              {card.title}
+                            </span>
+                            <span
+                              style={{
+                                fontSize: 13,
+                                color: "hsl(204, 98%, 15%)",
+                                lineHeight: 1.2,
+                              }}
+                            >
+                              {card.name}
+                            </span>
+                          </>
+                        );
+                        const style = {
+                          height: CARD_H,
+                          borderLeft: `4px solid ${cardAccent}`,
+                          background: card.faculty ? "hsl(45, 100%, 96%)" : "#fff",
+                        };
+                        return card.href ? (
+                          <a
+                            key={card.id}
+                            href={card.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            draggable={false}
+                            title={`${card.name}'s portfolio`}
+                            className="flex flex-col justify-center rounded-md px-2.5 no-underline shadow
+                              outline-offset-2 transition hover:shadow-lg hover:brightness-95"
+                            style={{ ...style, cursor: "pointer" }}
                           >
-                            {card.title}
-                          </span>
-                          <span
-                            style={{
-                              fontSize: 13,
-                              color: "hsl(204, 98%, 15%)",
-                              lineHeight: 1.2,
-                            }}
+                            {body}
+                          </a>
+                        ) : (
+                          <div
+                            key={card.id}
+                            className="flex flex-col justify-center rounded-md px-2.5 shadow"
+                            style={style}
                           >
-                            {card.name}
-                          </span>
-                        </div>
-                      ))}
+                            {body}
+                          </div>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
