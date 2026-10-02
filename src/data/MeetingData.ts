@@ -1,17 +1,28 @@
 import type { MeetingData } from "./types";
+// Updated 2026-09-25 from the CCC Google Calendar (week of 2026-09-21).
 export const meetingData: MeetingData[] = [
   {
-    day: "Sundays",
-    time: "9:30 PM - 10:00 PM",
-    title: "Executive Board Meeting",
+    day: "Mondays",
+    time: "3:30 PM - 4:00 PM",
+    title: "Product Department Meeting",
     tags: ["Department Meeting"],
-    description: "Planning the direction of the organization",
-    contact: "ble@terpmail.umd.edu",
-    location: "board-voice Discord server voice channel",
+    description:
+      "Generating product specifications based on client information",
+    contact: "campuscoderscrew@gmail.com",
+    location: "Discord server voice channel",
   },
   {
     day: "Mondays",
-    time: "7:00 PM - 7:15 PM",
+    time: "4:15 PM - 4:45 PM",
+    title: "Team Angel Meeting",
+    tags: ["Team Meeting"],
+    description: "Working on Terps Racing's website",
+    contact: "ble2005@terpmail.umd.edu",
+    location: "Discord server voice channel",
+  },
+  {
+    day: "Mondays",
+    time: "5:30 PM - 6:00 PM",
     title: "Team Whale Meeting",
     tags: ["Team Meeting"],
     description: "Working on the HR System project",
@@ -28,16 +39,6 @@ export const meetingData: MeetingData[] = [
     location: "Discord server voice channel",
   },
   {
-    day: "Tuesdays",
-    time: "10:00 AM - 10:30 AM",
-    title: "Product Department Meeting",
-    tags: ["Department Meeting"],
-    description:
-      "Generating product specifications based on client information",
-    contact: "campuscoderscrew@gmail.com",
-    location: "Discord server voice channel",
-  },
-  {
     day: "Mondays",
     time: "6:30 PM - 7:00 PM",
     title: "Events Department Meeting",
@@ -48,10 +49,10 @@ export const meetingData: MeetingData[] = [
   },
   {
     day: "Mondays",
-    time: "7:30 PM - 8:00 PM",
-    title: "Recruitment Team Meeting",
-    tags: ["Team Meeting"],
-    description: "Recruiting prospective members on LinkedIn",
+    time: "7:00 PM - 7:30 PM",
+    title: "Analytics Department Meeting",
+    tags: ["Department Meeting"],
+    description: "Analyzing club data and reporting metrics",
     contact: "campuscoderscrew@gmail.com",
     location: "Discord server voice channel",
   },
@@ -75,12 +76,12 @@ export const meetingData: MeetingData[] = [
   },
   {
     day: "Saturdays",
-    time: "10:30 PM - 11:00 PM",
-    title: "Team Angel Meeting",
-    tags: ["Team Meeting"],
-    description: "Working on Terps Racing's website",
-    contact: "ble2005@terpmail.umd.edu",
-    location: "Discord server voice channel",
+    time: "5:00 PM - 5:30 PM",
+    title: "Executive Board Meeting",
+    tags: ["Department Meeting"],
+    description: "Planning the direction of the organization",
+    contact: "ble@terpmail.umd.edu",
+    location: "board-voice Discord server voice channel",
   },
   {
     day: "",

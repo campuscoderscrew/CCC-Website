@@ -24,6 +24,7 @@ export default function AccordionItem(props: Props) {
   // For precise accordion opening
   const [panelHeight, setPanelHeight] = useState<number>(0);
   const panelRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
   const panelMaxHeight = { maxHeight: isOpen ? panelHeight : 0 };
 
   // Must run before paint: until the panel is measured there is no max-height
@@ -39,17 +40,30 @@ export default function AccordionItem(props: Props) {
 
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    // Content can change height after mount (web fonts swapping in, text
+    // rewrapping), which would clip an open panel, so re-measure on any change.
+    const observer = new ResizeObserver(handleResize);
+    if (contentRef.current) observer.observe(contentRef.current);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      observer.disconnect();
+    };
   }, []);
 
-  // The panel's left margin must equal the button's left padding plus the ship
-  // wheel's width plus the gutter between them, so the body lines up with the
-  // label above it.
+  // From sm up, the panel's left margin must equal the button's left padding
+  // plus the ship wheel's width plus the gutter between them, so the body lines
+  // up with the label above it.
   // Default: p-4 (16) + size-10 (40) + gap-4 (16) = 72px = ml-18
   // Compact:  px-2 (8) + size-8  (32) + gap-3 (12) = 52px = ml-13
+  // On phones that indent eats a fifth of the width, so the body instead lines
+  // up with the button's own left padding (ml-4 / ml-2).
   const buttonSpacing = compact ? "px-2 py-3 gap-3" : "p-4 gap-4";
   const wheelSize = compact ? "size-8" : "size-10";
-  const panelSpacing = compact ? "ml-13 -mt-3 mb-3" : "ml-18 -mt-4 mb-4";
+  const panelSpacing = compact
+    ? "ml-2 sm:ml-13 -mt-3 mb-3"
+    : "ml-4 sm:ml-18 -mt-4 mb-4";
 
   return (
     <div className="flex flex-col justify-items-stretch text-ocean-dark">
@@ -75,7 +89,7 @@ export default function AccordionItem(props: Props) {
           ${panelSpacing}
           ${isOpen ? "duration-500" : "duration-300"}`}
       >
-        <div className="">{children}</div>
+        <div ref={contentRef}>{children}</div>
       </div>
     </div>
   );

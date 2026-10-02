@@ -202,6 +202,9 @@ export type TeamNames =
   // Finance department
   | "Accounting"
   | "Investment"
+  | "Fundraising"
+  // Marketing department
+  | "Recruitment"
   // Graphic Design department
   | "Graphic Design";
 

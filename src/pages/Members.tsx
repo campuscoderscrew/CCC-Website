@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import Navbar from "../components/Navbar";
-import { memberData } from "../data/MemberData";
+import { memberData } from "../data/members/2026W39";
 import { currentPositions, formatRole } from "../data/hr-system-types";
 import type { Position, Role } from "../data/hr-system-types";
 
@@ -331,7 +331,19 @@ export default function Members() {
     });
   }, [width, height]);
 
-  useEffect(fit, [fit]);
+  /*
+   * On phones the whole chart fits only at an unreadable scale, so start
+   * zoomed in on the top of the tree instead; FIT still shows everything.
+   */
+  const initialView = useCallback(() => {
+    const element = viewportRef.current;
+    if (!element) return;
+    if (element.clientWidth >= 640) return fit();
+    const k = 0.7;
+    setView({ x: element.clientWidth / 2 - root.cx * k, y: 150, k });
+  }, [fit, root]);
+
+  useEffect(initialView, [initialView]);
 
   /* wheel zoom about the cursor (non-passive so preventDefault sticks) */
   useEffect(() => {
@@ -434,14 +446,14 @@ export default function Members() {
   );
 
   const buttonClass =
-    "h-9 w-9 rounded-md bg-white/95 text-[hsl(204,98%,15%)] text-lg font-bold shadow " +
+    "h-11 w-11 sm:h-9 sm:w-9 rounded-md bg-white/95 text-[hsl(204,98%,15%)] text-lg font-bold shadow " +
     "hover:bg-white cursor-pointer select-none leading-none";
 
   return (
     <>
       <Navbar />
 
-      <main className="h-screen w-full overflow-hidden bg-[#193463]">
+      <main className="h-dvh w-full overflow-hidden bg-[#193463]">
         {/* Header scrim: keeps the title readable as the chart pans beneath it. */}
         <div
           className="pointer-events-none absolute inset-x-0 top-0 z-30 px-4 pb-10 pt-[76px] text-center"
@@ -455,11 +467,13 @@ export default function Members() {
           </h1>
           <p className="mt-1 text-sm text-white/70">
             {total} current positions across {root.children.length} sectors —
-            drag to move, scroll or pinch to zoom.
+            drag to move, <span className="max-sm:hidden">scroll or </span>
+            pinch to zoom.
           </p>
         </div>
 
-        <div className="absolute right-4 top-[76px] z-30 flex flex-col gap-2">
+        {/* Bottom corner on phones (thumb reach, clear of the title) */}
+        <div className="absolute right-4 bottom-6 sm:bottom-auto sm:top-[76px] z-30 flex flex-col gap-2">
           <button
             type="button"
             aria-label="Zoom in"

@@ -17,9 +17,19 @@ export default function Events() {
           and committee meetings every week. Feel free to drop in for a meeting
           (please email us for meeting links) or reach out to us!
         </span>
+        {/* Month view is unreadable on a phone, so phones get the agenda view.
+            Lazy loading keeps the hidden one from loading. */}
         <iframe
-          className="size-full max-w-200 h-150 rounded-lg"
+          title="Upcoming events calendar"
+          loading="lazy"
+          className="hidden sm:block size-full max-w-200 h-150 rounded-lg"
           src={calendarLink}
+        ></iframe>
+        <iframe
+          title="Upcoming events agenda"
+          loading="lazy"
+          className="sm:hidden w-full h-120 rounded-lg"
+          src={`${calendarLink}&mode=AGENDA`}
         ></iframe>
       </div>
 
