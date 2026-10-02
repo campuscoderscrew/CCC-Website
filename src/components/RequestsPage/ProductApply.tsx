@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function WebsiteApply() {
   return (
     <div
@@ -5,7 +7,16 @@ export default function WebsiteApply() {
           flex flex-col gap-16 items-center font-sans text-ocean-dark
           [&_h1]:font-semibold [&_h2]:font-semibold [&_h3]:font-semibold"
     >
-      <h1 className="text-4xl">Product Requests</h1>
+      <div className="flex flex-col items-center gap-3 text-center">
+        <h1 className="text-4xl">Product Requests</h1>
+        <Link
+          to="/projects"
+          className="font-medium text-ocean-light underline underline-offset-4
+            transition-colors duration-300 hover:text-ocean-dark"
+        >
+          See the projects we've built and maintain →
+        </Link>
+      </div>
       <div
         className="w-full grid sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-12 
           [&_div]:space-y-2 md:[&_div]:col-span-2

@@ -69,4 +69,10 @@ export interface ProjectData {
   repoUrl?: string;
   /** Screenshot or logo. Falls back to the project's initials. */
   image?: string;
+  /**
+   * Full-page screenshot of the live site (a tall image, 800px wide). The
+   * card shows the top and scrolls through the rest on hover. Takes
+   * precedence over `image`. Files live in src/assets/projects/.
+   */
+  screenshot?: string;
 }

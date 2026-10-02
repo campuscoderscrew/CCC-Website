@@ -5,16 +5,16 @@ import logo from "@assets/logo.png";
 
 const navLinks = [
   { label: "Home", to: "/home" },
+  { label: "Projects", to: "/projects" },
   { label: "Requests", to: "/requests" },
   { label: "Apply", to: "/apply" },
   { label: "Members", to: "/members" },
   { label: "Meetings", to: "/meetings" },
   // { label: "Crew", to: "/crew" },
-  { label: "Projects", to: "/projects" },
 ];
 
 /** Routes that paint their own dark background, so the navbar inverts to white. */
-const DARK_ROUTES = ["/members"];
+const DARK_ROUTES = ["/members", "/members/resources"];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

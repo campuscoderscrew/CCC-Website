@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FaGithub,
   FaGlobe,
@@ -175,6 +176,38 @@ function ProjectLinks({ project }: { project: ProjectData }) {
   );
 }
 
+/**
+ * Full-page screenshot in a square frame. At rest it shows the top of the
+ * site; while the card is hovered (or focused) it pans down through the whole
+ * page, at a pace scaled to the page's length, then eases back up on leave.
+ */
+function SiteScreenshot({ project }: { project: ProjectData }) {
+  /* screenshot height / width; 1 until the image loads */
+  const [ratio, setRatio] = useState(1);
+  const scrollSeconds = Math.max(2, (ratio - 1) * 2.5);
+
+  return (
+    <div className="aspect-square w-full overflow-hidden rounded bg-[#043e6c]">
+      <img
+        src={project.screenshot}
+        alt={`Screenshot of the ${project.name} website`}
+        loading="lazy"
+        onLoad={(e) =>
+          setRatio(e.currentTarget.naturalHeight / e.currentTarget.naturalWidth)
+        }
+        style={{ ["--scroll-time" as string]: `${scrollSeconds}s` }}
+        className="block size-full object-cover object-top
+          transition-[object-position] duration-700 ease-out
+          group-hover:object-bottom group-focus-within:object-bottom
+          group-hover:ease-in-out group-focus-within:ease-in-out
+          group-hover:[transition-duration:var(--scroll-time)]
+          group-focus-within:[transition-duration:var(--scroll-time)]
+          motion-reduce:transition-none"
+      />
+    </div>
+  );
+}
+
 function ProjectCard({
   project,
   assignment,
@@ -186,9 +219,12 @@ function ProjectCard({
 
   return (
     <div
-      className="bg-white border-2 border-white rounded-lg p-4 w-65
+      className="group relative bg-white border-2 border-white rounded-lg p-4 w-65
         flex flex-col gap-3
-        transition duration-300 hover:shadow-lg hover:-translate-y-1"
+        transition duration-300 ease-out
+        hover:z-10 hover:scale-[1.08] hover:shadow-2xl
+        focus-within:z-10 focus-within:scale-[1.08] focus-within:shadow-2xl
+        motion-reduce:hover:scale-100 motion-reduce:focus-within:scale-100"
     >
       {/* Two-line min height keeps the rows below aligned across cards */}
       <h3
@@ -198,7 +234,9 @@ function ProjectCard({
         {project.name}
       </h3>
 
-      {project.image ? (
+      {project.screenshot ? (
+        <SiteScreenshot project={project} />
+      ) : project.image ? (
         <img
           src={project.image}
           alt={project.name}
@@ -316,6 +354,14 @@ export default function Projects() {
         </h1>
         <p className="text-ocean-dark text-center mt-3 mb-0">
           Every project we build is open source.
+        </p>
+        <p
+          className="max-w-xl text-center text-ocean-dark mt-4 mb-0 px-5 py-3
+            rounded-xl bg-sky-light/60 border border-sky-light"
+        >
+          <strong>Built to last.</strong> We're committed to maintaining our
+          projects long term, so our clients keep getting value from their
+          sites well after launch.
         </p>
         <div className="flex flex-wrap justify-center gap-3 mt-5">
           {[
@@ -505,14 +551,25 @@ export default function Projects() {
           <h2 className="text-2xl font-bold text-center">
             Want to see your project here?
           </h2>
-          <a
-            href="https://go.umd.edu/CCC-website-request"
-            className="px-6 py-3 bg-ocean-dark text-white font-bold rounded-lg
-              no-underline transition-colors duration-300 ease-out
-              hover:bg-sand-light hover:text-ocean-dark"
-          >
-            Request a Website!
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a
+              href="https://go.umd.edu/CCC-website-request"
+              className="px-6 py-3 bg-ocean-dark text-white font-bold rounded-lg
+                no-underline transition-colors duration-300 ease-out
+                hover:bg-sand-light hover:text-ocean-dark"
+            >
+              Request a Website!
+            </a>
+            <Link
+              to="/requests"
+              className="px-6 py-3 border-2 border-ocean-dark text-ocean-dark
+                font-bold rounded-lg no-underline
+                transition-colors duration-300 ease-out
+                hover:bg-ocean-dark hover:text-white"
+            >
+              How requests work
+            </Link>
+          </div>
         </section>
 
         {/* Footer */}
