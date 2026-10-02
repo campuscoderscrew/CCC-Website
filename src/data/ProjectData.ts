@@ -1,5 +1,9 @@
 import type { ProjectData } from "./types";
 
+import terpsRacingShot from "@assets/projects/terps-racing.webp";
+import apexFundShot from "@assets/projects/apex-fund.webp";
+import bridgeUmdShot from "@assets/projects/bridge-umd.webp";
+
 /*
  * Mirrors the website request queue:
  * https://docs.google.com/spreadsheets/d/1tbR7P5Oog9kwcKzv6onO58jGhsv6u_hCcPNQGSm_e00
@@ -25,6 +29,7 @@ export const projectData: ProjectData[] = [
     ],
     liveUrl: "https://racing.umd.edu",
     repoUrl: repo("terps-racing"),
+    screenshot: terpsRacingShot,
   },
   {
     name: "Campus Coders Crew",
@@ -60,13 +65,15 @@ export const projectData: ProjectData[] = [
       { semester: "Summer '26", team: "Whale" },
       { semester: "Fall '26", team: "Staff Developer" },
     ],
+    liveUrl: "https://stics.umd.edu/",
   },
   {
     name: "Apex Fund",
     status: "done",
     history: [{ semester: "Fall '25", team: "Nurse" }],
-    liveUrl: "https://apex-website-beta.vercel.app",
+    liveUrl: "https://www.apex-umd.com/our-mission",
     repoUrl: repo("apex-website"),
+    screenshot: apexFundShot,
   },
   {
     name: "DataCrawl",
@@ -162,6 +169,7 @@ export const projectData: ProjectData[] = [
     ],
     liveUrl: "https://bridge-umd.vercel.app",
     repoUrl: repo("bridge-umd"),
+    screenshot: bridgeUmdShot,
   },
   {
     name: "Global Communities Student Association",

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import Navbar from "../components/Navbar";
+import MembersTabs from "../components/MembersTabs";
 import { memberData } from "../data/members/2026W39";
 import { currentPositions, formatRole } from "../data/hr-system-types";
 import type { Position, Role } from "../data/hr-system-types";
@@ -317,7 +318,7 @@ export default function Members() {
     if (!element) return;
     const { clientWidth: vw, clientHeight: vh } = element;
     /* leave room for the fixed navbar and the page title above the canvas */
-    const inset = 150;
+    const inset = 190;
     const usableH = Math.max(120, vh - inset - 24);
     const k = clamp(
       Math.min(vw / (width || 1), usableH / (height || 1)) * 0.94,
@@ -340,7 +341,7 @@ export default function Members() {
     if (!element) return;
     if (element.clientWidth >= 640) return fit();
     const k = 0.7;
-    setView({ x: element.clientWidth / 2 - root.cx * k, y: 150, k });
+    setView({ x: element.clientWidth / 2 - root.cx * k, y: 190, k });
   }, [fit, root]);
 
   useEffect(initialView, [initialView]);
@@ -465,6 +466,7 @@ export default function Members() {
           <h1 className="text-2xl font-bold text-white sm:text-3xl">
             Organization Chart
           </h1>
+          <MembersTabs className="pointer-events-auto mt-2" />
           <p className="mt-1 text-sm text-white/70">
             {total} current positions across {root.children.length} sectors —
             drag to move, <span className="max-sm:hidden">scroll or </span>
