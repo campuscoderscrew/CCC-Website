@@ -6,15 +6,14 @@ import type { Membership } from "../hr-system-types";
 // Every position is current: it starts 2026-09-21 and carries no endDate.
 // Experience level: "A."/"Assoc." prefixes map to Associate; every other
 // listing is Intermediate. Roles in parentheses become desiredRoles.
-// Supervisor = the Head / Primary Lead / Team Lead listed in the same block.
+// Supervisor = the Head / Primary Lead / Team Lead listed in the same block,
+// by name only. Emails and Discord handles are not published (stripped 2026-10-15).
 
 export const MEMBER_DATA_VERSION = "2026W39";
 
 export const memberData: Membership[] = [
   {
     name: "Aadit S.",
-    emails: ["asood126@terpmail.umd.edu"],
-    discord: "_h.i_",
     positionHistory: [
       {
         role: "Developer",
@@ -35,8 +34,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Aarav G.",
-    emails: ["aaravg2808@gmail.com"],
-    discord: "aarav03726",
     positionHistory: [
       {
         role: "Product Manager",
@@ -44,15 +41,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Product",
-        supervisor: ["Nura I.", "nismaiel@terpmail.umd.edu"],
+        supervisor: ["Nura I."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Aaron S.",
-    emails: ["asintaye@umd.edu"],
-    discord: "aaron_9928",
     positionHistory: [
       {
         role: "Member",
@@ -66,8 +61,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Aashvith J.",
-    emails: ["aashvithfor@gmail.com"],
-    discord: "thedestiny56",
     github: "Aashvith",
     positionHistory: [
       {
@@ -90,8 +83,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Abhinav A.",
-    emails: ["aarora16@terpmail.umd.edu"],
-    discord: "._._.lol",
     positionHistory: [
       {
         role: "Member",
@@ -105,8 +96,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Abhinav G.",
-    emails: ["abhimg23@terpmail.umd.edu"],
-    discord: "abhimg23",
     positionHistory: [
       {
         role: "Member",
@@ -120,8 +109,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Abhiram K.",
-    emails: ["akuuram@terpmail.umd.edu"],
-    discord: "squarelord",
     positionHistory: [
       {
         role: "Member",
@@ -129,15 +116,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "BREAK",
-        supervisor: ["Faith C.", "fchang1@terpmail.umd.edu"],
+        supervisor: ["Faith C."],
         availability: { kind: "hoursUnknown", status: "BREAK" },
       },
     ],
   },
   {
     name: "Abhiram K.",
-    emails: ["akidamb1@terpmail.umd.edu"],
-    discord: "bluesyncer",
     positionHistory: [
       {
         role: "Member",
@@ -151,8 +136,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Abigail C.",
-    emails: ["aychen2@terpmail.umd.edu"],
-    discord: "lilacify",
     github: "abigailyc",
     desiredRoles: ["Secondary Lead"],
     positionHistory: [
@@ -176,8 +159,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ada Z.",
-    emails: ["adazhang@terpmail.umd.edu"],
-    discord: "travelinglemonade",
     positionHistory: [
       {
         role: "Member",
@@ -191,8 +172,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Aditya B.",
-    emails: ["abansal0@terpmail.umd.edu"],
-    discord: "aditya_12345",
     positionHistory: [
       {
         role: "Developer",
@@ -200,7 +179,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "BREAK",
-        supervisor: ["Faith C.", "fchang1@terpmail.umd.edu"],
+        supervisor: ["Faith C."],
         availability: { kind: "hoursUnknown", status: "BREAK" },
         proficiency: {
           frontEnd: 2,
@@ -214,8 +193,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Adnan K.",
-    emails: ["adnankabir.va@gmail.com"],
-    discord: "curry4356",
     positionHistory: [
       {
         role: "Member",
@@ -229,8 +206,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Adrian Q.",
-    emails: ["aquijada@terpmail.umd.edu"],
-    discord: "relaxinkoala",
     positionHistory: [
       {
         role: "Member",
@@ -244,8 +219,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Adrianna B.",
-    emails: ["aburgos3@terpmail.umd.edu"],
-    discord: "adriannaburgos",
     positionHistory: [
       {
         role: "Product Manager",
@@ -259,8 +232,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Advay M.",
-    emails: ["advaymonga@gmail.com"],
-    discord: "manamana123",
     positionHistory: [
       {
         role: "Member",
@@ -274,8 +245,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Afrah S.",
-    emails: ["afrah@terpmail.umd.edu"],
-    discord: "afrahsiddiqui8206",
     positionHistory: [
       {
         role: "Member",
@@ -289,8 +258,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Aidan P.",
-    emails: ["aidanhpaul@gmail.com"],
-    discord: "lemon_pecan_pie",
     positionHistory: [
       {
         role: "Member",
@@ -304,8 +271,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ajay C.",
-    emails: ["Ajay.Cunnane@hotmail.com"],
-    discord: "spadeez",
     github: "actsknn",
     positionHistory: [
       {
@@ -335,8 +300,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Akash E.",
-    emails: ["akasherra@gmail.com"],
-    discord: "chubbknux",
     positionHistory: [
       {
         role: "Developer",
@@ -357,8 +320,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Akshay K.M.",
-    emails: ["amanimar@montgomerycollege.edu"],
-    discord: "akm0412",
     positionHistory: [
       {
         role: "Developer",
@@ -379,8 +340,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Alan Joshua S.",
-    emails: ["alanj@umd.edu"],
-    discord: "NaanProcrastinator",
     github: "alanjegan",
     positionHistory: [
       {
@@ -403,8 +362,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Alan W.",
-    emails: ["alanwang@terpmail.umd.edu"],
-    discord: "guwopgm",
     positionHistory: [
       {
         role: "Developer",
@@ -414,7 +371,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Angel",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -429,8 +386,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Alec Z.",
-    emails: ["azzhang@terpmail.umd.edu"],
-    discord: "trrrr1616",
     positionHistory: [
       {
         role: "Member",
@@ -438,15 +393,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "BREAK",
-        supervisor: ["Faith C.", "fchang1@terpmail.umd.edu"],
+        supervisor: ["Faith C."],
         availability: { kind: "hoursUnknown", status: "BREAK" },
       },
     ],
   },
   {
     name: "Aleksandar A.",
-    emails: ["angelov6@terpmail.umd.edu"],
-    discord: "alek111",
     github: "aleksandarangelov06",
     positionHistory: [
       {
@@ -457,7 +410,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Hammerhead",
         cluster: "Caribbean",
-        supervisor: ["Raghav S.", "rsenthi2@terpmail.umd.edu"],
+        supervisor: ["Raghav S."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -472,8 +425,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Alex K.",
-    emails: ["akotkin@terpmail.umd.edu"],
-    discord: "alexk11",
     positionHistory: [
       {
         role: "Member",
@@ -494,8 +445,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Alex O.",
-    emails: ["a.okjr7147@gmail.com"],
-    discord: "bobjr7147",
     positionHistory: [
       {
         role: "Member",
@@ -516,8 +465,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Alexander S.",
-    emails: ["asorescu@terpmail.umd.edu"],
-    discord: "goatforgoat",
     positionHistory: [
       {
         role: "Member",
@@ -531,8 +478,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Alexander T.",
-    emails: ["alextai0430@gmail.com"],
-    discord: "alantai930",
     positionHistory: [
       {
         role: "Member",
@@ -546,8 +491,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ali H.",
-    emails: ["aham16120@gmail.com"],
-    discord: "hali16120",
     github: "alihamza21117-cyber",
     positionHistory: [
       {
@@ -570,8 +513,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Allen S.",
-    emails: ["astrick2@terpmail.umd.edu"],
-    discord: "Allenstrick11",
     positionHistory: [
       {
         role: "Accountant",
@@ -586,7 +527,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Allison L.",
-    emails: ["alee1244@terpmail.umd.edu"],
     github: "alli7596",
     positionHistory: [
       {
@@ -608,8 +548,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Amanda T.",
-    emails: ["atsai123@terpmail.umd.edu"],
-    discord: "hemerocallis13",
     github: "amytxc",
     positionHistory: [
       {
@@ -625,8 +563,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Amanee J.",
-    emails: ["ajamil04@terpmail.umd.edu"],
-    discord: "ajamil_8",
     positionHistory: [
       {
         role: "Member",
@@ -640,8 +576,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Amber L.",
-    emails: ["amber13@umd.edu"],
-    discord: "n79898",
     positionHistory: [
       {
         role: "Member",
@@ -649,15 +583,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "INACTIVE",
-        supervisor: ["Khaymar M.", "kamoe25@terpmail.umd.edu"],
+        supervisor: ["Khaymar M."],
         availability: { kind: "hoursUnknown", status: "INACTIVE" },
       },
     ],
   },
   {
     name: "Ami A.G.",
-    emails: ["aami123@terpmail.umd.edu"],
-    discord: "aa_mity",
     github: "aami11",
     positionHistory: [
       {
@@ -679,8 +611,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ananya D.",
-    emails: ["adandi@terpmail.umd.edu"],
-    discord: "ananya_45000",
     positionHistory: [
       {
         role: "Member",
@@ -688,15 +618,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "INACTIVE",
-        supervisor: ["Khaymar M.", "kamoe25@terpmail.umd.edu"],
+        supervisor: ["Khaymar M."],
         availability: { kind: "hoursUnknown", status: "INACTIVE" },
       },
     ],
   },
   {
     name: "Andrea I.",
-    emails: ["andreai5@terpmail.umd.edu"],
-    discord: "andreacaroline25",
     positionHistory: [
       {
         role: "Member",
@@ -710,8 +638,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Andrew G.",
-    emails: ["aguo1007@terpmail.umd.edu"],
-    discord: "obscurecouscous",
     github: "Andrewg314",
     positionHistory: [
       {
@@ -734,8 +660,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Andrew Y.",
-    emails: ["ayu0219@terpmail.umd.edu", "andyyunj@gmail.com"],
-    discord: "andyoy",
     positionHistory: [
       {
         role: "Developer",
@@ -745,7 +669,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Hammerhead",
         cluster: "Caribbean",
-        supervisor: ["Raghav S.", "rsenthi2@terpmail.umd.edu"],
+        supervisor: ["Raghav S."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -768,8 +692,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Andy X.",
-    emails: ["andyxu@terpmail.umd.edu"],
-    discord: "andy-xu2",
     github: "andy.xu",
     positionHistory: [
       {
@@ -791,8 +713,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Anica D.",
-    emails: ["adesai28@terpmail.umd.edu"],
-    discord: "cheesymcmuffin",
     github: "anica19999",
     desiredRoles: ["Secondary Lead"],
     positionHistory: [
@@ -816,8 +736,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Anika Ryah A.",
-    emails: ["aaracan@terpmail.umd.edu"],
-    discord: "ar.ya",
     github: "aaracan",
     positionHistory: [
       {
@@ -833,8 +751,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Anna L.",
-    emails: ["alin1214@terpmail.umd.edu"],
-    discord: "anna4438",
     positionHistory: [
       {
         role: "Member",
@@ -848,8 +764,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ansh K.",
-    emails: ["akeshar1@terpmail.umd.edu"],
-    discord: "ansh02388",
     github: "Keshaans000",
     desiredRoles: ["Secondary Lead"],
     positionHistory: [
@@ -889,8 +803,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Anthony B.",
-    emails: ["anthonyblaziak@gmail.com"],
-    discord: "godspeed1955",
     positionHistory: [
       {
         role: "Member",
@@ -904,8 +816,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Anthony C.",
-    emails: ["achan7@terpmail.umd.edu"],
-    discord: "achan12",
     github: "achan112233",
     positionHistory: [
       {
@@ -921,8 +831,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Anushka A.",
-    emails: ["aagarw13@terpmail.umd.edu"],
-    discord: "aagarw1335",
     positionHistory: [
       {
         role: "Member",
@@ -936,8 +844,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Anvita K.",
-    emails: ["akinare@terpmail.umd.edu"],
-    discord: "ask_1107",
     positionHistory: [
       {
         role: "Member",
@@ -952,8 +858,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Anvitha R.",
-    emails: ["ravipati@terpmail.umd.edu"],
-    discord: "chocolion1425",
     github: "anvite1107",
     positionHistory: [
       {
@@ -968,8 +872,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "April S.",
-    emails: ["Seachapril@gmail.com"],
-    discord: "applebeaches",
     positionHistory: [
       {
         role: "Member",
@@ -977,15 +879,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "INACTIVE",
-        supervisor: ["Khaymar M.", "kamoe25@terpmail.umd.edu"],
+        supervisor: ["Khaymar M."],
         availability: { kind: "hoursUnknown", status: "INACTIVE" },
       },
     ],
   },
   {
     name: "Archita N.",
-    emails: ["anaik19@terpmail.umd.edu"],
-    discord: "stalecheeto19",
     positionHistory: [
       {
         role: "Advisor",
@@ -1006,8 +906,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ariella H.",
-    emails: ["ahirsch7@terpmail.umd.edu"],
-    discord: "ariellahirschhorn",
     positionHistory: [
       {
         role: "Member",
@@ -1021,8 +919,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Arik H.",
-    emails: ["ahasan13@terpmail.umd.edu"],
-    discord: "arik_hasan",
     positionHistory: [
       {
         role: "Member",
@@ -1036,8 +932,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Arman I.",
-    emails: ["aivaturi@terpmail.umd.edu"],
-    discord: "_darkhawk_",
     github: "DarkHawkx",
     positionHistory: [
       {
@@ -1059,8 +953,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Arnav D.",
-    emails: ["adoshi14@terpmail.umd.edu"],
-    discord: "arnav_42464",
     positionHistory: [
       {
         role: "Member",
@@ -1074,8 +966,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Arslan H.",
-    emails: ["ahashmi1@terpmail.umd.edu"],
-    discord: "ahash1",
     github: "ahashmi15",
     positionHistory: [
       {
@@ -1091,8 +981,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ashim T.",
-    emails: ["athakuri@terpmail.umd.edu"],
-    discord: "astttt",
     positionHistory: [
       {
         role: "Member",
@@ -1106,8 +994,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Averie A.",
-    emails: ["averieahn@gmail.com"],
-    discord: "filet_mign",
     positionHistory: [
       {
         role: "Primary Lead",
@@ -1131,8 +1017,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ayushi M.",
-    emails: ["ayushi28@terpmail.umd.edu"],
-    discord: "_ayushi_m_",
     positionHistory: [
       {
         role: "Member",
@@ -1146,8 +1030,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Bao N.",
-    emails: ["baon@terpmail.umd.edu"],
-    discord: "ballinnn",
     github: "didgeridoo1",
     positionHistory: [
       {
@@ -1158,7 +1040,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Shortfin",
         cluster: "Caribbean",
-        supervisor: ["Averie A.", "averieahn@gmail.com"],
+        supervisor: ["Averie A."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -1173,8 +1055,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Benjamin T.",
-    emails: ["benluthomas@gmail.com"],
-    discord: "Bking27",
     github: "bthomas279",
     positionHistory: [
       {
@@ -1196,8 +1076,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Bhavesh M.",
-    emails: ["bmantrab@terpmail.umd.edu"],
-    discord: "bhavesh089165",
     positionHistory: [
       {
         role: "Member",
@@ -1211,8 +1089,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Boubacar D.",
-    emails: ["boubacardime1@gmail.com"],
-    discord: "b0ou",
     github: "b0uu",
     positionHistory: [
       {
@@ -1223,7 +1099,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Blue",
         cluster: "Caribbean",
-        supervisor: ["Erik J.", "ejohns37@terpmail.umd.edu"],
+        supervisor: ["Erik J."],
         availability: { kind: "range", min: 11, max: 15, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -1238,8 +1114,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Brandon B.",
-    emails: ["bbao1@terpmail.umd.edu"],
-    discord: "bran9435",
     github: "Bran170",
     positionHistory: [
       {
@@ -1262,8 +1136,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Brennen L.",
-    emails: ["ble2005@terpmail.umd.edu", "brennen.t.le@gmail.com"],
-    discord: "brthhule",
     github: "brthhule",
     positionHistory: [
       {
@@ -1302,7 +1174,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Internal Operations",
         department: "Finance",
-        supervisor: ["Krishna D.", "kdesai14@terpmail.umd.edu"],
+        supervisor: ["Krishna D."],
         availability: { kind: "range", min: 5, max: 10, status: "ACTIVE" },
       },
       {
@@ -1319,7 +1191,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "External Operations",
         department: "Marketing",
-        supervisor: ["Krishna D.", "kdesai14@terpmail.umd.edu"],
+        supervisor: ["Krishna D."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
       },
       {
@@ -1337,7 +1209,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Product",
-        supervisor: ["Nura I.", "nismaiel@terpmail.umd.edu"],
+        supervisor: ["Nura I."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
       },
       {
@@ -1394,8 +1266,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Brett N.",
-    emails: ["bninnema@terpmail.umd.edu"],
-    discord: "brett01930",
     positionHistory: [
       {
         role: "Member",
@@ -1409,8 +1279,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Bryan G.",
-    emails: ["bgao215@terpmail.umd.edu"],
-    discord: "brangoo",
     positionHistory: [
       {
         role: "Developer",
@@ -1425,8 +1293,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Bryan W.",
-    emails: [],
-    discord: "unicornpotato",
     positionHistory: [
       {
         role: "Advisor",
@@ -1438,8 +1304,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Candela L.",
-    emails: ["clespada@terpmail.umd.edu"],
-    discord: "candelalespada_46581",
     github: "candelalespada",
     positionHistory: [
       {
@@ -1448,7 +1312,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Product",
-        supervisor: ["Nura I.", "nismaiel@terpmail.umd.edu"],
+        supervisor: ["Nura I."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
       },
       {
@@ -1459,7 +1323,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Hammerhead",
         cluster: "Caribbean",
-        supervisor: ["Raghav S.", "rsenthi2@terpmail.umd.edu"],
+        supervisor: ["Raghav S."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 4,
@@ -1474,8 +1338,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Carmi W.",
-    emails: ["carmi@terpmail.umd.edu"],
-    discord: "carmiw",
     positionHistory: [
       {
         role: "Financial Analyst",
@@ -1490,8 +1352,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Carolina H.",
-    emails: ["cherrer3@umd.edu"],
-    discord: "manychurros",
     github: "caroherrera24",
     positionHistory: [
       {
@@ -1507,8 +1367,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Carolyn L.",
-    emails: ["clee1230@terpmail.umd.edu"],
-    discord: "pweecambweeansowouwup",
     positionHistory: [
       {
         role: "Member",
@@ -1522,8 +1380,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Cedric Y.",
-    emails: ["cyeo@umd.edu"],
-    discord: "Pouncetail",
     positionHistory: [
       {
         role: "Member",
@@ -1537,8 +1393,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Chetan M.",
-    emails: ["cmaviti@umd.edu"],
-    discord: "thunderstorm7577",
     positionHistory: [
       {
         role: "Member",
@@ -1552,8 +1406,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ching L.",
-    emails: ["clam123@terpmail.umd.edu"],
-    discord: "ocardh",
     github: "ChingWLam",
     positionHistory: [
       {
@@ -1576,8 +1428,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Chris Y.",
-    emails: ["yuc25@terpmail.umd.edu"],
-    discord: "Quackz12345",
     github: "Quackz12345",
     positionHistory: [
       {
@@ -1599,8 +1449,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Christina P.",
-    emails: ["cpalmeri@terpmail.umd.edu"],
-    discord: "cpalmeri996131",
     positionHistory: [
       {
         role: "Financial Analyst",
@@ -1615,8 +1463,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Christopher H.",
-    emails: ["chu52012@terpmail.umd.edu"],
-    discord: "chriswhoasked",
     positionHistory: [
       {
         role: "Developer",
@@ -1645,8 +1491,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Christopher S.",
-    emails: ["csotropa@terpmail.umd.edu"],
-    discord: "chrispyyy__",
     github: "christophersotropa",
     desiredRoles: ["Secondary Lead"],
     positionHistory: [
@@ -1670,8 +1514,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Chunlin J.",
-    emails: ["cj171bob21@gmail.com"],
-    discord: "CJ171",
     github: "CJ171",
     positionHistory: [
       {
@@ -1682,7 +1524,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Whale",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -1697,8 +1539,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Cindy P.",
-    emails: ["cindylapham531@gmail.com"],
-    discord: "cindy02975",
     positionHistory: [
       {
         role: "Developer",
@@ -1719,8 +1559,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Colin K.",
-    emails: ["ckurniaw@terpmail.umd.edu"],
-    discord: "colin4676",
     github: "colin-kurniawan",
     positionHistory: [
       {
@@ -1742,8 +1580,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Cyncia C.",
-    emails: ["cmysq2024@gmail.com"],
-    discord: "cynciachen",
     positionHistory: [
       {
         role: "Developer",
@@ -1764,8 +1600,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Danie G.",
-    emails: ["danieog@terpmail.umd.edu"],
-    discord: "clementshine",
     positionHistory: [
       {
         role: "Advisor",
@@ -1779,15 +1613,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Quality Assurance",
-        supervisor: ["Gisele M.", "gsmathew@terpmail.umd.edu"],
+        supervisor: ["Gisele M."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Daniel P.",
-    emails: ["dpetrov@terpmail.umd.edu"],
-    discord: "daniel1130_",
     github: "dpetrov07",
     positionHistory: [
       {
@@ -1798,7 +1630,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Cookiecutter",
         cluster: "Bering",
-        supervisor: ["Guillaume N. K.", "gnanfack@terpmail.umd.edu"],
+        supervisor: ["Guillaume N. K."],
         availability: { kind: "range", min: 6, max: 10, status: "INACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -1813,8 +1645,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Daphne L.",
-    emails: ["dlee1216@terpmail.umd.edu"],
-    discord: "daphlee55",
     github: "daphlee55",
     positionHistory: [
       {
@@ -1830,8 +1660,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Dawood R.",
-    emails: ["drauf@terpmail.umd.edu"],
-    discord: "dawood_rauf",
     github: "d-rauf-dev",
     positionHistory: [
       {
@@ -1853,8 +1681,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Dean T.",
-    emails: ["dtruong6@terpmail.umd.edu"],
-    discord: "King.of.games",
     positionHistory: [
       {
         role: "Member",
@@ -1868,8 +1694,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Declan N.",
-    emails: ["dnice1@terpmail.umd.edu"],
-    discord: "declannice",
     github: "DeclanNice",
     positionHistory: [
       {
@@ -1908,7 +1732,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Delancey O.",
-    emails: ["dowens14@terpmail.umd.edu"],
     github: "delowens05",
     positionHistory: [
       {
@@ -1930,7 +1753,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Derek H.",
-    emails: ["dmoney@terpmail.umd.edu"],
     positionHistory: [
       {
         role: "Member",
@@ -1944,8 +1766,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Devarajan P.",
-    emails: ["dpalania@terpmail.umd.edu"],
-    discord: "spampigeon",
     positionHistory: [
       {
         role: "Member",
@@ -1953,15 +1773,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "INACTIVE",
-        supervisor: ["Khaymar M.", "kamoe25@terpmail.umd.edu"],
+        supervisor: ["Khaymar M."],
         availability: { kind: "hoursUnknown", status: "INACTIVE" },
       },
     ],
   },
   {
     name: "Devin D.",
-    emails: ["Devin.droddy@gmail.com"],
-    discord: "justDeeevin",
     github: "justDeeevin",
     positionHistory: [
       {
@@ -1983,8 +1801,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Dilan K.",
-    emails: ["dkaza@terpmail.umd.edu"],
-    discord: "7246",
     positionHistory: [
       {
         role: "Member",
@@ -1992,15 +1808,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "INACTIVE",
-        supervisor: ["Khaymar M.", "kamoe25@terpmail.umd.edu"],
+        supervisor: ["Khaymar M."],
         availability: { kind: "hoursUnknown", status: "INACTIVE" },
       },
     ],
   },
   {
     name: "Dishita M.",
-    emails: ["dmutthe@terpmail.umd.edu"],
-    discord: "dishita_27293",
     positionHistory: [
       {
         role: "Developer",
@@ -2021,8 +1835,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Divyansh B.",
-    emails: ["divyanshbansal4224@gmail.com"],
-    discord: "divyanshbansal",
     positionHistory: [
       {
         role: "Member",
@@ -2036,8 +1848,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Diya B.",
-    emails: ["dbiguvu@terpmail.umd.edu"],
-    discord: "diya_b125",
     github: "dbiguvu",
     positionHistory: [
       {
@@ -2048,7 +1858,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Angel",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 11, max: 15, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -2063,8 +1873,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Efrem A.",
-    emails: ["ealabo@terpmail.umd.edu"],
-    discord: "maniac__maniac",
     positionHistory: [
       {
         role: "Member",
@@ -2078,8 +1886,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Eileen J.",
-    emails: ["ejiang13@terpmail.umd.edu"],
-    discord: "3il33n",
     github: "ejia29",
     positionHistory: [
       {
@@ -2095,8 +1901,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ekansh S.",
-    emails: ["esahu14@umd.edu"],
-    discord: "ekanshouldsleep",
     positionHistory: [
       {
         role: "Developer",
@@ -2117,8 +1921,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Elianna N.",
-    emails: ["elianna@umd.edu"],
-    discord: "elianna_95443",
     positionHistory: [
       {
         role: "Member",
@@ -2132,8 +1934,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Elizabeth A.",
-    emails: ["ealcid@terpmail.umd.edu"],
-    discord: "lizalcid",
     positionHistory: [
       {
         role: "Member",
@@ -2154,8 +1954,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Emanuel M.",
-    emails: ["emunozco@terpmail.umd.edu"],
-    discord: "crispyesel",
     github: "CrispyEsel",
     positionHistory: [
       {
@@ -2178,8 +1976,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Emily P.",
-    emails: ["eep@terpmail.umd.edu"],
-    discord: "e.m.m.m",
     positionHistory: [
       {
         role: "Member",
@@ -2193,8 +1989,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Eric Z.",
-    emails: ["ericbkzhang@gmail.com"],
-    discord: "ErikTheGreen",
     github: "Eric2422",
     positionHistory: [
       {
@@ -2205,7 +1999,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Shortfin",
         cluster: "Caribbean",
-        supervisor: ["Averie A.", "averieahn@gmail.com"],
+        supervisor: ["Averie A."],
         availability: { kind: "atLeast", min: 20, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -2220,8 +2014,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Eric Z.",
-    emails: ["ezhao73@terpmail.umd.edu"],
-    discord: "foggiestlake",
     github: "foggylake73",
     positionHistory: [
       {
@@ -2232,7 +2024,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Hammerhead",
         cluster: "Caribbean",
-        supervisor: ["Raghav S.", "rsenthi2@terpmail.umd.edu"],
+        supervisor: ["Raghav S."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -2247,8 +2039,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Erik J.",
-    emails: ["ejohns37@terpmail.umd.edu"],
-    discord: "erik007781",
     positionHistory: [
       {
         role: "Primary Lead",
@@ -2272,8 +2062,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Eunice Y.",
-    emails: ["eyang110@terpmail.umd.edu"],
-    discord: "uni.pat",
     positionHistory: [
       {
         role: "Developer",
@@ -2283,7 +2071,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Hammerhead",
         cluster: "Caribbean",
-        supervisor: ["Raghav S.", "rsenthi2@terpmail.umd.edu"],
+        supervisor: ["Raghav S."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -2298,8 +2086,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Everton W.",
-    emails: ["everton@terpmail.umd.edu"],
-    discord: "chickumming",
     github: "hambalon",
     positionHistory: [
       {
@@ -2310,7 +2096,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Angel",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -2325,8 +2111,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Faith C.",
-    emails: ["fchang1@terpmail.umd.edu"],
-    discord: "llynn6",
     positionHistory: [
       {
         role: "Primary Lead",
@@ -2355,8 +2139,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Feifan L.",
-    emails: ["feifanli0724@gmail.com"],
-    discord: "li_oi",
     positionHistory: [
       {
         role: "Member",
@@ -2370,8 +2152,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Fola A.",
-    emails: ["aadesany@terpmail.umd.edu"],
-    discord: "fodega",
     github: "folaadesanya13",
     positionHistory: [
       {
@@ -2394,8 +2174,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Francis A.",
-    emails: ["fametewe@gmail.com"],
-    discord: "francis67_65387",
     github: "Francis-A67",
     desiredRoles: ["Primary Lead"],
     positionHistory: [
@@ -2419,8 +2197,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Franco M.",
-    emails: ["fmolinari106@gmail.com"],
-    discord: "mr.ghost7969",
     positionHistory: [
       {
         role: "Head",
@@ -2442,8 +2218,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Gabe A.-T.",
-    emails: ["ganderse@terpmail.umd.edu"],
-    discord: "Secretid_",
     positionHistory: [
       {
         role: "Member",
@@ -2457,8 +2231,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Gavin S.",
-    emails: ["gschwing@terpmail.umd.edu"],
-    discord: "@superdogemaster",
     github: "gavinks25",
     desiredRoles: ["Secondary Lead"],
     positionHistory: [
@@ -2482,8 +2254,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Gianna O.",
-    emails: ["gozurumb@terpmail.umd.edu"],
-    discord: "Zenxyoosungx707",
     github: "vitaminwater26",
     positionHistory: [
       {
@@ -2494,7 +2264,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Blue",
         cluster: "Caribbean",
-        supervisor: ["Erik J.", "ejohns37@terpmail.umd.edu"],
+        supervisor: ["Erik J."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 1,
@@ -2509,8 +2279,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Gisele M.",
-    emails: ["gsmathew@terpmail.umd.edu"],
-    discord: "giselemathew",
     positionHistory: [
       {
         role: "Head",
@@ -2524,8 +2292,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Grace L.",
-    emails: ["gliu46@terpmail.umd.edu"],
-    discord: "maybell6381",
     github: "gmin101",
     positionHistory: [
       {
@@ -2547,8 +2313,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Grace M.",
-    emails: ["gracemin101@gmail.com"],
-    discord: "potato_buns",
     positionHistory: [
       {
         role: "Developer",
@@ -2563,8 +2327,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Guillaume N. K.",
-    emails: ["gnanfack@terpmail.umd.edu"],
-    discord: "Geemplayclaw",
     positionHistory: [
       {
         role: "Primary Lead",
@@ -2587,8 +2349,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Hannah S.",
-    emails: ["hsitther@terpmail.umd.edu"],
-    discord: "hannahhh023",
     positionHistory: [
       {
         role: "Member",
@@ -2602,8 +2362,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Hans G.",
-    emails: ["hgupta12@terpmail.umd.edu"],
-    discord: "doge1912",
     positionHistory: [
       {
         role: "Developer",
@@ -2624,8 +2382,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Hansika Y.",
-    emails: ["hyanamad@terpmail.umd.edu"],
-    discord: "hanns7767",
     github: "hansi8y",
     positionHistory: [
       {
@@ -2664,8 +2420,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Harini N.",
-    emails: ["hnarayan@terpmail.umd.edu"],
-    discord: "harinii_n",
     positionHistory: [
       {
         role: "Member",
@@ -2679,8 +2433,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Harini T.",
-    emails: ["ht2027@terpmail.umd.edu"],
-    discord: "harini_15908",
     positionHistory: [
       {
         role: "Member",
@@ -2694,8 +2446,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Harrison J.",
-    emails: ["harrison.gj1001@gmail.com"],
-    discord: "Bigbeanlemon",
     github: "TheBigBean-Cyber",
     positionHistory: [
       {
@@ -2718,8 +2468,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Harsh D.",
-    emails: ["hdesai12@terpmail.umd.edu"],
-    discord: "ha_des27",
     positionHistory: [
       {
         role: "Member",
@@ -2733,8 +2481,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Hayat K.",
-    emails: ["hkhan3@terpmail.umd.edu"],
-    discord: "hytk33",
     positionHistory: [
       {
         role: "Member",
@@ -2748,8 +2494,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Heath C.",
-    emails: ["hcaponer@terpmail.umd.edu"],
-    discord: "MrFreshginger#8107",
     positionHistory: [
       {
         role: "Member",
@@ -2763,8 +2507,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Helena T.",
-    emails: ["htesfaye@umd.edu"],
-    discord: "lennaa.x",
     positionHistory: [
       {
         role: "Member",
@@ -2772,15 +2514,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "INACTIVE",
-        supervisor: ["Khaymar M.", "kamoe25@terpmail.umd.edu"],
+        supervisor: ["Khaymar M."],
         availability: { kind: "hoursUnknown", status: "INACTIVE" },
       },
     ],
   },
   {
     name: "Hellen O.",
-    emails: ["hou@terpmail.umd.edu"],
-    discord: "watermel0n623",
     positionHistory: [
       {
         role: "Member",
@@ -2794,8 +2534,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Hengyu T.",
-    emails: ["htao1@terpmail.umd.edu"],
-    discord: "wo_tm_call_110",
     github: "htao1-max",
     positionHistory: [
       {
@@ -2806,7 +2544,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Angel",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -2821,8 +2559,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Henry G.",
-    emails: ["hgardin1@terpmail.umd.edu"],
-    discord: "spirithrg",
     positionHistory: [
       {
         role: "Primary Lead",
@@ -2830,15 +2566,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "BREAK",
-        supervisor: ["Faith C.", "fchang1@terpmail.umd.edu"],
+        supervisor: ["Faith C."],
         availability: { kind: "hoursUnknown", status: "BREAK" },
       },
     ],
   },
   {
     name: "Hernan G.",
-    emails: ["gonzah45@terpmail.umd.edu"],
-    discord: "sleepysulfur",
     github: "gonzaher3",
     positionHistory: [
       {
@@ -2849,7 +2583,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Shortfin",
         cluster: "Caribbean",
-        supervisor: ["Averie A.", "averieahn@gmail.com"],
+        supervisor: ["Averie A."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -2864,8 +2598,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ian P.",
-    emails: ["iannpanait@gmail.com"],
-    discord: "ianp.",
     github: "IanP07",
     positionHistory: [
       {
@@ -2887,8 +2619,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Immama K.",
-    emails: ["ikhan125@terpmail.umd.edu"],
-    discord: "immama0211",
     github: "ikhan125",
     desiredRoles: ["Secondary Lead"],
     positionHistory: [
@@ -2912,8 +2642,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Indira S.",
-    emails: ["ishafii@terpmail.umd.edu"],
-    discord: "indiphonic",
     github: "ishafii00",
     positionHistory: [
       {
@@ -2935,8 +2663,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jackson B.",
-    emails: ["Jcb263@gmail.com"],
-    discord: "jacksonbennett_16383",
     github: "JacksonBennett05",
     positionHistory: [
       {
@@ -2952,8 +2678,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jacob K.",
-    emails: ["jkang115@umd.edu"],
-    discord: "jcupbreast",
     positionHistory: [
       {
         role: "Member",
@@ -2967,8 +2691,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jadon T.",
-    emails: ["jthoma47@terpmail.umd.edu"],
-    discord: "droopyindex",
     positionHistory: [
       {
         role: "Developer",
@@ -2989,8 +2711,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jake J.",
-    emails: ["jakeski2015@gmail.com"],
-    discord: "pabh_",
     github: "jakeski2015",
     positionHistory: [
       {
@@ -3012,8 +2732,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jakob R.",
-    emails: ["jrogelio@terpmail.umd.edu"],
-    discord: "ppoopeefart",
     github: "Promeum",
     positionHistory: [
       {
@@ -3029,8 +2747,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "James Z.",
-    emails: ["jzhou12@terpmail.umd.edu"],
-    discord: "jimmaz1",
     github: "jameszhou-dev",
     positionHistory: [
       {
@@ -3052,8 +2768,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jamie Z.",
-    emails: ["jamjam@terpmail.umd.edu"],
-    discord: "jamjam",
     positionHistory: [
       {
         role: "Member",
@@ -3067,8 +2781,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jamila N.",
-    emails: ["jnchare@terpmail.umd.edu"],
-    discord: "Ch3lzzy",
     github: "Jchare",
     positionHistory: [
       {
@@ -3084,8 +2796,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jana A.",
-    emails: ["jahmed1454@gmail.com"],
-    discord: "janaa8180",
     github: "jana1454",
     positionHistory: [
       {
@@ -3096,7 +2806,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Shortfin",
         cluster: "Caribbean",
-        supervisor: ["Averie A.", "averieahn@gmail.com"],
+        supervisor: ["Averie A."],
         availability: { kind: "range", min: 11, max: 15, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -3111,8 +2821,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jared D.",
-    emails: ["jareddiaz386213@gmail.com"],
-    discord: "Jared-Hernandez",
     github: "methodlackingman",
     positionHistory: [
       {
@@ -3135,8 +2843,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jared K.",
-    emails: ["jkimiaba@terpmail.umd.edu"],
-    discord: "Jaredkimi",
     positionHistory: [
       {
         role: "Member",
@@ -3150,8 +2856,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jasir S.",
-    emails: ["jtsiddiq@terpmail.umd.edu"],
-    discord: "pizzabowler",
     github: "Jasir-Siddiqui",
     desiredRoles: ["Primary Lead", "Secondary Lead"],
     positionHistory: [
@@ -3175,8 +2879,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jasmine N.",
-    emails: ["jnguy416@terpmail.umd.edu"],
-    discord: "toastyulty",
     positionHistory: [
       {
         role: "Developer",
@@ -3191,8 +2893,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jason D.",
-    emails: ["jtdsilva@terpmail.umd.edu"],
-    discord: "greatheavens06",
     positionHistory: [
       {
         role: "Member",
@@ -3206,8 +2906,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jason O.",
-    emails: ["jopong@terpmail.umd.edu"],
-    discord: "jason_opong",
     positionHistory: [
       {
         role: "Advisor",
@@ -3219,8 +2917,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jason S.",
-    emails: ["jshi1213@terpmail.umd.edu"],
-    discord: "minecraftboss5820_",
     positionHistory: [
       {
         role: "Developer",
@@ -3242,8 +2938,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jasper T.L.",
-    emails: ["jthornel@terpmail.umd.edu"],
-    discord: "jaspertl_56948",
     github: "JasperThorneLyman",
     positionHistory: [
       {
@@ -3265,8 +2959,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Javier. L.-C.",
-    emails: ["javilunacle@gmail.com"],
-    discord: "havikun.",
     positionHistory: [
       {
         role: "Member",
@@ -3280,8 +2972,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jay G.",
-    emails: ["jguwalan@umd.edu"],
-    discord: "jayaihacks",
     positionHistory: [
       {
         role: "Member",
@@ -3295,8 +2985,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jayden L.",
-    emails: ["jaydenlee0322@gmail.com"],
-    discord: "jayden4639",
     github: "jlee4639",
     positionHistory: [
       {
@@ -3319,8 +3007,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jennifer (Jenny) D.",
-    emails: ["jding755@gmail.com"],
-    discord: "nomnom._.",
     github: "jng7937",
     positionHistory: [
       {
@@ -3331,7 +3017,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Whale",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -3345,8 +3031,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jenny L.",
-    emails: ["jle36@terpmail.umd.edu"],
-    discord: "J3nny1e",
     positionHistory: [
       {
         role: "Advisor",
@@ -3358,7 +3042,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jiayi Q.",
-    emails: ["jyqi@terpmail.umd.edu"],
     positionHistory: [
       {
         role: "Developer",
@@ -3366,7 +3049,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "BREAK",
-        supervisor: ["Faith C.", "fchang1@terpmail.umd.edu"],
+        supervisor: ["Faith C."],
         availability: { kind: "hoursUnknown", status: "BREAK" },
         proficiency: {
           frontEnd: 3,
@@ -3380,8 +3063,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Jimmy Z.",
-    emails: ["jzhang58@terpmail.umd.edu"],
-    discord: "undefinedconcept",
     positionHistory: [
       {
         role: "Developer",
@@ -3396,8 +3077,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "John V.",
-    emails: ["jvalenc1@terpmail.umd.edu"],
-    discord: "unusual_well95",
     github: "johnnvalencia",
     positionHistory: [
       {
@@ -3419,8 +3098,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Joshua W.",
-    emails: ["jwong112@terpmail.umd.edu"],
-    discord: "charmingsumo",
     github: "wongjoshua2005",
     positionHistory: [
       {
@@ -3442,8 +3119,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Justin H.",
-    emails: ["justindholmberg@gmail.com"],
-    discord: "luxferre3",
     positionHistory: [
       {
         role: "Member",
@@ -3457,8 +3132,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Justin M.",
-    emails: ["jmckendr@terpmail.umd.edu"],
-    discord: "Mitts8333",
     positionHistory: [
       {
         role: "Member",
@@ -3473,8 +3146,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kaelyn F.",
-    emails: ["kaelynf@terpmail.umd.edu"],
-    discord: "___4045",
     github: "kaelynf-commits",
     positionHistory: [
       {
@@ -3485,7 +3156,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Shortfin",
         cluster: "Caribbean",
-        supervisor: ["Averie A.", "averieahn@gmail.com"],
+        supervisor: ["Averie A."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
         proficiency: {
           frontEnd: 1,
@@ -3500,8 +3171,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kaliza M.",
-    emails: ["kmvunganyi@gmail.com"],
-    discord: "Kalizam",
     positionHistory: [
       {
         role: "Developer",
@@ -3511,7 +3180,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Cookiecutter",
         cluster: "Bering",
-        supervisor: ["Guillaume N. K.", "gnanfack@terpmail.umd.edu"],
+        supervisor: ["Guillaume N. K."],
         availability: { kind: "range", min: 1, max: 5, status: "INACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -3526,8 +3195,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kamdi N.",
-    emails: ["knwakibu@terpmail.umd.edu"],
-    discord: "vaporous_milk",
     github: "kjnwakibu",
     positionHistory: [
       {
@@ -3543,8 +3210,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kamya M.",
-    emails: ["kmilesstem2023@gmail.com"],
-    discord: "Lumi_ia",
     github: "Kdm2633",
     positionHistory: [
       {
@@ -3554,7 +3219,7 @@ export const memberData: Membership[] = [
         operationsSector: "External Operations",
         department: "Marketing",
         team: "Graphic Design",
-        supervisor: ["Myura N.", "mnimalan@terpmail.umd.edu"],
+        supervisor: ["Myura N."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
       },
       {
@@ -3576,8 +3241,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kashi A.",
-    emails: ["agarwalk@terpmail.umd.edu"],
-    discord: "kashvi.27",
     positionHistory: [
       {
         role: "Member",
@@ -3591,8 +3254,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kashish P.",
-    emails: ["kashishp0609@gmail.com"],
-    discord: "watermelon_695",
     github: "kashishp695",
     positionHistory: [
       {
@@ -3601,7 +3262,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "BREAK",
-        supervisor: ["Faith C.", "fchang1@terpmail.umd.edu"],
+        supervisor: ["Faith C."],
         availability: { kind: "hoursUnknown", status: "BREAK" },
         proficiency: {
           frontEnd: 3,
@@ -3615,8 +3276,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Katherine H.",
-    emails: ["katheriine.hong@gmail.com"],
-    discord: "katherine_hong",
     positionHistory: [
       {
         role: "Member",
@@ -3630,8 +3289,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kathryn M.",
-    emails: ["manzk06@umd.edu"],
-    discord: "ma._.nz",
     positionHistory: [
       {
         role: "Member",
@@ -3645,8 +3302,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kelly B.",
-    emails: ["kbbarrow@terpmail.umd.edu"],
-    discord: "kb77",
     positionHistory: [
       {
         role: "Developer",
@@ -3656,7 +3311,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Shortfin",
         cluster: "Caribbean",
-        supervisor: ["Averie A.", "averieahn@gmail.com"],
+        supervisor: ["Averie A."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -3671,8 +3326,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kevin P.C.",
-    emails: ["kcortez1130@gmail.com"],
-    discord: "xhale_in",
     github: "kpuentec",
     positionHistory: [
       {
@@ -3694,8 +3347,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kevin Z.",
-    emails: ["kevinbczhang@gmail.com"],
-    discord: "kevinzhang2135",
     github: "KevinZhang2135",
     positionHistory: [
       {
@@ -3706,7 +3357,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Whale",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -3720,8 +3371,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Khasan Y.",
-    emails: ["khasan.coding@gmail.com"],
-    discord: "drago.codes",
     github: "khasan-coding",
     positionHistory: [
       {
@@ -3732,7 +3381,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Blue",
         cluster: "Caribbean",
-        supervisor: ["Erik J.", "ejohns37@terpmail.umd.edu"],
+        supervisor: ["Erik J."],
         availability: { kind: "range", min: 11, max: 15, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -3747,8 +3396,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Khawaja A. K.",
-    emails: ["ashar@terpmail.umd.edu"],
-    discord: "shreksyyy",
     positionHistory: [
       {
         role: "Member",
@@ -3762,8 +3409,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Khaymar M.",
-    emails: ["kamoe25@terpmail.umd.edu"],
-    discord: "pumkino3921",
     positionHistory: [
       {
         role: "Primary Lead",
@@ -3777,8 +3422,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Kidus E.",
-    emails: ["esayiaskidus@gmail.com"],
-    discord: "reverendk121",
     github: "KidusEsa",
     positionHistory: [
       {
@@ -3800,8 +3443,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Killian A.",
-    emails: ["killian.aubry@icloud.com"],
-    discord: "killianaubry",
     positionHistory: [
       {
         role: "Member",
@@ -3815,8 +3456,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Krish P.",
-    emails: ["kparapoi@terpmail.umd.edu"],
-    discord: "chrisblitz_93894",
     github: "ChrisBlitz",
     positionHistory: [
       {
@@ -3827,7 +3466,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Blue",
         cluster: "Caribbean",
-        supervisor: ["Erik J.", "ejohns37@terpmail.umd.edu"],
+        supervisor: ["Erik J."],
         availability: { kind: "atLeast", min: 20, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -3842,8 +3481,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Krishna D.",
-    emails: ["kdesai14@terpmail.umd.edu"],
-    discord: "krissppyy",
     positionHistory: [
       {
         role: "Head",
@@ -3865,8 +3502,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Lahari C.",
-    emails: ["scheruv1@terpmail.umd.edu"],
-    discord: "lahari0",
     positionHistory: [
       {
         role: "Product Manager",
@@ -3874,15 +3509,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Product",
-        supervisor: ["Nura I.", "nismaiel@terpmail.umd.edu"],
+        supervisor: ["Nura I."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Lakshmi K.",
-    emails: ["lkannika@terpmail.umd.edu"],
-    discord: "lakshmik0645",
     github: "LakshmiK-cloud",
     positionHistory: [
       {
@@ -3912,8 +3545,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Layan A.",
-    emails: ["latiya@terpmail.umd.edu"],
-    discord: "layan9308",
     positionHistory: [
       {
         role: "Member",
@@ -3927,8 +3558,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Laynce L.",
-    emails: ["hjlim07@gmail.com"],
-    discord: "Falzaa1.",
     positionHistory: [
       {
         role: "Member",
@@ -3942,8 +3571,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Leo C.",
-    emails: ["lchen104@terpmail.umd.edu"],
-    discord: "Yumnt",
     positionHistory: [
       {
         role: "Member",
@@ -3957,8 +3584,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Lexie L.",
-    emails: ["unlam@terpmail.umd.edu"],
-    discord: "lexie_711",
     positionHistory: [
       {
         role: "Member",
@@ -3972,8 +3597,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Leyan",
-    emails: ["llyu@terpmail.umd.edu"],
-    discord: "unicorn.iris",
     positionHistory: [
       {
         role: "Member",
@@ -3987,8 +3610,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Lillianne D.",
-    emails: ["ldavis33@terpmail.umd.edu"],
-    discord: "redpanda04",
     github: "lilliannedavis",
     positionHistory: [
       {
@@ -4004,8 +3625,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Luis C.",
-    emails: ["luiscortezjr872@gmail.com"],
-    discord: "nub.__.",
     github: "lc-newb",
     positionHistory: [
       {
@@ -4016,7 +3635,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Angel",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -4030,8 +3649,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Luis M.",
-    emails: ["umdluis@umd.edu"],
-    discord: "isn1p",
     positionHistory: [
       {
         role: "Member",
@@ -4045,8 +3662,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Lydia P.",
-    emails: ["lpaulsen@terpmail.umd.edu"],
-    discord: "lydia_p3",
     positionHistory: [
       {
         role: "Member",
@@ -4060,8 +3675,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Lynn H.",
-    emails: ["lhui1@terpmail.umd.edu"],
-    discord: "lynn737",
     positionHistory: [
       {
         role: "Developer",
@@ -4082,8 +3695,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Mahita K.",
-    emails: [],
-    discord: "mahitaxkamal",
     positionHistory: [
       {
         role: "Member",
@@ -4099,8 +3710,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Manan R.",
-    emails: ["mrajput@terpmail.umd.edu"],
-    discord: "melmix_",
     github: "mraj05",
     positionHistory: [
       {
@@ -4111,7 +3720,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Whale",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -4126,8 +3735,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Mann P.",
-    emails: ["msparekh@terpmail.umd.edu"],
-    discord: "msparekh",
     positionHistory: [
       {
         role: "Financial Analyst",
@@ -4142,8 +3749,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Manvi S.",
-    emails: ["msharm10@umd.edu"],
-    discord: "manvi_s_07",
     positionHistory: [
       {
         role: "Product Manager",
@@ -4151,15 +3756,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Product",
-        supervisor: ["Nura I.", "nismaiel@terpmail.umd.edu"],
+        supervisor: ["Nura I."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Manya G.",
-    emails: ["mgarg@terpmail.umd.edu"],
-    discord: "manyagarg23",
     github: "manyagarg23",
     positionHistory: [
       {
@@ -4175,8 +3778,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Mark J.",
-    emails: ["mjosep06@umd.edu", "markgjoseph06@gmail.com"],
-    discord: "snowymark",
     github: "snowymark",
     positionHistory: [
       {
@@ -4195,7 +3796,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Blue",
         cluster: "Caribbean",
-        supervisor: ["Erik J.", "ejohns37@terpmail.umd.edu"],
+        supervisor: ["Erik J."],
         availability: { kind: "range", min: 1, max: 5, status: "INACTIVE" },
         proficiency: {
           frontEnd: 1,
@@ -4210,8 +3811,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Mary N.",
-    emails: ["marynasimova7@gmail.com"],
-    discord: "maryn0614",
     positionHistory: [
       {
         role: "Analyst",
@@ -4219,15 +3818,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Internal Operations",
         department: "Analytics",
-        supervisor: ["Brennen L.", "ble2005@terpmail.umd.edu"],
+        supervisor: ["Brennen L."],
         availability: { kind: "atLeast", min: 20, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Matthew S.",
-    emails: ["mseung@terpmail.umd.edu"],
-    discord: "cref",
     positionHistory: [
       {
         role: "Member",
@@ -4241,8 +3838,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Max I.",
-    emails: ["misens@terpmail.umd.edu"],
-    discord: "migRat",
     github: "misenstadt",
     desiredRoles: ["Secondary Lead"],
     positionHistory: [
@@ -4274,8 +3869,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Maya C.",
-    emails: ["mcleve25@terpmail.umd.edu"],
-    discord: "mcleve25",
     positionHistory: [
       {
         role: "Member",
@@ -4289,8 +3882,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Maya K.",
-    emails: ["mjkond5@terpmail.umd.edu"],
-    discord: "mayakonduru",
     github: "mayakonduru",
     positionHistory: [
       {
@@ -4301,7 +3892,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Whale",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 11, max: 15, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -4316,8 +3907,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Maya K.",
-    emails: ["mkotek@terpmail.umd.edu"],
-    discord: "datcord7168",
     positionHistory: [
       {
         role: "Member",
@@ -4331,8 +3920,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Melat A.",
-    emails: ["mabera1@terpmail.umd.edu"],
-    discord: "melat0924",
     positionHistory: [
       {
         role: "Member",
@@ -4346,8 +3933,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Meron A.",
-    emails: ["meron3319@gmail.com", "mabera@terpmail.umd.edu"],
-    discord: "meron6306",
     positionHistory: [
       {
         role: "Advisor",
@@ -4367,8 +3952,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Michael M.",
-    emails: ["ipibym@gmail.com"],
-    discord: "batabutterbatter",
     positionHistory: [
       {
         role: "Member",
@@ -4376,15 +3959,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "INACTIVE",
-        supervisor: ["Khaymar M.", "kamoe25@terpmail.umd.edu"],
+        supervisor: ["Khaymar M."],
         availability: { kind: "hoursUnknown", status: "INACTIVE" },
       },
     ],
   },
   {
     name: "Michal G.",
-    emails: ["mgiczela@terpmail.umd.edu"],
-    discord: "thatzcrunchy",
     github: "mgiczela",
     desiredRoles: ["Secondary Lead"],
     positionHistory: [
@@ -4408,8 +3989,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Michelle C.",
-    emails: [],
-    discord: "michelliec",
     positionHistory: [
       {
         role: "Advisor",
@@ -4421,8 +4000,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Mika P.",
-    emails: ["mpersaud@umd.edu"],
-    discord: "tarlie",
     github: "mpersaud7",
     positionHistory: [
       {
@@ -4444,8 +4021,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Monu S.",
-    emails: ["monus@terpmail.umd.edu"],
-    discord: "monopneuma",
     github: "monopneuma",
     positionHistory: [
       {
@@ -4467,8 +4042,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Munachiso O.",
-    emails: ["munao@terpmail.umd.edu"],
-    discord: "muna-o",
     github: "fullscreen_",
     positionHistory: [
       {
@@ -4491,8 +4064,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Mutsawashe (MJ) M.",
-    emails: ["mmlambo@terpmail.umd.edu"],
-    discord: ".notmj.",
     positionHistory: [
       {
         role: "Developer",
@@ -4507,8 +4078,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Myura N.",
-    emails: ["mnimalan@terpmail.umd.edu"],
-    discord: "Lovelypeacock",
     positionHistory: [
       {
         role: "Primary Lead",
@@ -4525,15 +4094,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "External Operations",
         department: "Public Relations",
-        supervisor: ["Zoey T.", ""],
+        supervisor: ["Zoey T."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Namai K.",
-    emails: ["namaikureishi@gmail.com"],
-    discord: "inamku",
     positionHistory: [
       {
         role: "Member",
@@ -4547,8 +4114,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Nathaniel D.",
-    emails: ["nsdiggs7@gmail.com"],
-    discord: "frdspln",
     github: "nsdiggs7",
     positionHistory: [
       {
@@ -4572,8 +4137,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Natheer M.",
-    emails: ["nmuwonge@terpmail.umd.edu"],
-    discord: "Natheer_Muwonge",
     github: "Natheer-Muwonge",
     positionHistory: [
       {
@@ -4595,8 +4158,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Nazia R.V.",
-    emails: ["naziarv@terpmail.umd.edu"],
-    discord: "naz928733",
     positionHistory: [
       {
         role: "Secondary Lead",
@@ -4611,8 +4172,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Neha C.",
-    emails: ["nchandy@terpmail.umd.edu"],
-    discord: "neha015432",
     github: "nmc18450",
     positionHistory: [
       {
@@ -4635,8 +4194,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Neha J.",
-    emails: ["njoshi18@terpmail.umd.edu"],
-    discord: "neha1123",
     positionHistory: [
       {
         role: "Member",
@@ -4650,8 +4207,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Neil N.",
-    emails: ["neil66252347@gmail.com"],
-    discord: "GuycalledNeil",
     positionHistory: [
       {
         role: "Member",
@@ -4666,8 +4221,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Nick Y.",
-    emails: ["nyuan@terpmail.umd.edu"],
-    discord: "nnnnnnick",
     github: "NickYuannn",
     positionHistory: [
       {
@@ -4678,7 +4231,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Cookiecutter",
         cluster: "Bering",
-        supervisor: ["Guillaume N. K.", "gnanfack@terpmail.umd.edu"],
+        supervisor: ["Guillaume N. K."],
         availability: { kind: "range", min: 11, max: 15, status: "INACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -4693,8 +4246,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Nicole I.",
-    emails: ["nicoleigbozulike@gmail.com"],
-    discord: "nikki___.",
     positionHistory: [
       {
         role: "Product Manager",
@@ -4708,8 +4259,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Nikhil S. V.",
-    emails: ["nvepuri@terpmail.umd.edu"],
-    discord: "nikhil.0666",
     positionHistory: [
       {
         role: "Member",
@@ -4717,15 +4266,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "INACTIVE",
-        supervisor: ["Khaymar M.", "kamoe25@terpmail.umd.edu"],
+        supervisor: ["Khaymar M."],
         availability: { kind: "hoursUnknown", status: "INACTIVE" },
       },
     ],
   },
   {
     name: "Nimita K.",
-    emails: ["nkompall@terpmail.umd.edu"],
-    discord: "nimita_78120",
     github: "nimitakompally",
     positionHistory: [
       {
@@ -4747,8 +4294,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Nishant V.",
-    emails: ["nvellank@terpmail.umd.edu"],
-    discord: "nishyfishy7525",
     github: "nvellanki11",
     positionHistory: [
       {
@@ -4764,8 +4309,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Noah W.",
-    emails: ["nrwitt12@gmail.com"],
-    discord: "Witty8703",
     positionHistory: [
       {
         role: "Member",
@@ -4780,8 +4323,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Nura I.",
-    emails: ["nismaiel@terpmail.umd.edu"],
-    discord: "nuraismaiel_51726",
     positionHistory: [
       {
         role: "Head",
@@ -4795,8 +4336,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Nyaing K.",
-    emails: ["nkyaw@terpmail.umd.edu"],
-    discord: "nye0320",
     positionHistory: [
       {
         role: "Member",
@@ -4810,8 +4349,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Omeed Z.",
-    emails: ["ozolali@terpmail.umd.edu"],
-    discord: "omeed_46187",
     github: "omeedz1",
     positionHistory: [
       {
@@ -4833,8 +4370,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Oscar R.",
-    emails: ["oromero1@terpmail.umd.edu"],
-    discord: "comprehensivemaybe",
     positionHistory: [
       {
         role: "Human Resources Specialist",
@@ -4842,15 +4377,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Internal Operations",
         department: "Human Resources",
-        supervisor: ["Brennen L.", "ble2005@terpmail.umd.edu"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Owen S.",
-    emails: ["oensun8@terpmail.umd.edu"],
-    discord: "sunsun4341",
     positionHistory: [
       {
         role: "Member",
@@ -4864,8 +4397,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Parsa T.",
-    emails: ["pteymo@terpmail.umd.edu"],
-    discord: "ptey.6",
     positionHistory: [
       {
         role: "Developer",
@@ -4887,8 +4418,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Pauline S.",
-    emails: ["psarayno@umd.edu"],
-    discord: "paulinesarayno",
     positionHistory: [
       {
         role: "Financial Analyst",
@@ -4914,15 +4443,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Product",
-        supervisor: ["Nura I.", "nismaiel@terpmail.umd.edu"],
+        supervisor: ["Nura I."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Peter B.",
-    emails: ["pbuckler@terpmail.umd.edu"],
-    discord: "peterbuckler",
     positionHistory: [
       {
         role: "Recruiter",
@@ -4931,7 +4458,7 @@ export const memberData: Membership[] = [
         operationsSector: "External Operations",
         department: "Marketing",
         team: "Recruitment",
-        supervisor: ["Brennen L.", ""],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 16, max: 20, status: "ACTIVE" },
       },
       {
@@ -4940,15 +4467,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Product",
-        supervisor: ["Nura I.", "nismaiel@terpmail.umd.edu"],
+        supervisor: ["Nura I."],
         availability: { kind: "range", min: 16, max: 20, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Phoenix T.",
-    emails: ["thom1724@terpmail.umd.edu"],
-    discord: "_ofblades",
     positionHistory: [
       {
         role: "Member",
@@ -4962,8 +4487,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Phuocsang T.",
-    emails: ["ptu123@terpmail.umd.edu"],
-    discord: "phoisveryokay",
     positionHistory: [
       {
         role: "Financial Analyst",
@@ -4987,8 +4510,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Pradham R.",
-    emails: ["pradham726@gmail.com"],
-    discord: "Paybackwinner",
     positionHistory: [
       {
         role: "Member",
@@ -5002,8 +4523,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Pranav P.",
-    emails: ["pmpatil@terpmail.umd.edu"],
-    discord: "pmpatil304",
     github: "pmpatil304",
     positionHistory: [
       {
@@ -5026,8 +4545,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Pranav S.",
-    emails: ["psatyade@terpmail.umd.edu"],
-    discord: "pranavsatyadeep",
     positionHistory: [
       {
         role: "Member",
@@ -5041,8 +4558,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Priyam K.",
-    emails: ["priyamk@terpmail.umd.edu"],
-    discord: "priyambad",
     positionHistory: [
       {
         role: "Member",
@@ -5056,8 +4571,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Priyanshu B.",
-    emails: ["pbhatts@umd.edu"],
-    discord: "hein#9912",
     positionHistory: [
       {
         role: "Member",
@@ -5071,8 +4584,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Purnima S.",
-    emails: ["pshahi1@umd.edu"],
-    discord: "purnimashahi",
     positionHistory: [
       {
         role: "Member",
@@ -5086,8 +4597,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Raghav (Rajo) J.",
-    emails: ["rjoshi19@terpmail.umd.edu"],
-    discord: "rah127",
     positionHistory: [
       {
         role: "Developer",
@@ -5097,7 +4606,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Hammerhead",
         cluster: "Caribbean",
-        supervisor: ["Raghav S.", "rsenthi2@terpmail.umd.edu"],
+        supervisor: ["Raghav S."],
         availability: { kind: "hoursUnknown", status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -5112,8 +4621,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Raghav K.",
-    emails: ["rkaminen@terpmail.umd.edu"],
-    discord: "peppathepig3083",
     github: "Raghavkam",
     positionHistory: [
       {
@@ -5135,8 +4642,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Raghav S.",
-    emails: ["rsenthi2@terpmail.umd.edu"],
-    discord: "rags9876",
     github: "ragjoshi",
     positionHistory: [
       {
@@ -5161,8 +4666,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Raine M.",
-    emails: ["raine@terpmail.umd.edu"],
-    discord: "rainegarden",
     github: "rainegarden",
     positionHistory: [
       {
@@ -5185,8 +4688,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Rawlinson P.",
-    emails: ["rpointer@terpmail.umd.edu"],
-    discord: "porogssj",
     positionHistory: [
       {
         role: "Member",
@@ -5200,8 +4701,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ray Z.",
-    emails: ["rzhang33@terpmail.umd.edu"],
-    discord: "headontoes",
     positionHistory: [
       {
         role: "Product Manager",
@@ -5215,8 +4714,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Rayan E.",
-    emails: ["relias1@terpmail.umd.edu"],
-    discord: "rye1114",
     positionHistory: [
       {
         role: "Advisor",
@@ -5228,8 +4725,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Rena K.",
-    emails: ["renakatz@terpmail.umd.edu"],
-    discord: "renakatz",
     positionHistory: [
       {
         role: "Product Manager",
@@ -5237,15 +4732,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Product",
-        supervisor: ["Nura I.", "nismaiel@terpmail.umd.edu"],
+        supervisor: ["Nura I."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Rence L.",
-    emails: ["rluo10@terpmail.umd.edu"],
-    discord: "spacehead10",
     github: "spacehead10",
     positionHistory: [
       {
@@ -5268,8 +4761,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Richa G.",
-    emails: ["richag7@terpmail.umd.edu"],
-    discord: "richieg7",
     positionHistory: [
       {
         role: "Member",
@@ -5283,8 +4774,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Rishabh S.",
-    emails: ["rsingh47@terpmail.umd.edu"],
-    discord: "narwhalboy47",
     positionHistory: [
       {
         role: "Developer",
@@ -5299,8 +4788,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Rishi K.",
-    emails: ["rkhosla6708@gmail.com"],
-    discord: "thetennisboi",
     github: "TENTHeRtloRtyLUX",
     positionHistory: [
       {
@@ -5323,8 +4810,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Rishi R.",
-    emails: ["rr1192@terpmail.umd.edu"],
-    discord: "count_crackula",
     positionHistory: [
       {
         role: "Member",
@@ -5338,8 +4823,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Rishi S.",
-    emails: ["rsarava1@terpmail.umd.edu"],
-    discord: "sr3562",
     github: "rsaravanan23",
     desiredRoles: ["Primary Lead"],
     positionHistory: [
@@ -5363,8 +4846,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ritvik M.",
-    emails: ["rimahapatra7@gmail.com"],
-    discord: "R1tMah",
     positionHistory: [
       {
         role: "Member",
@@ -5378,8 +4859,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Rona R.",
-    emails: ["ronaroy@terpmail.umd.edu"],
-    discord: "rona7017",
     positionHistory: [
       {
         role: "Member",
@@ -5393,8 +4872,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ronald W.",
-    emails: ["joshwil@terpmail.umd.edu"],
-    discord: "ha.p",
     github: "hapredy",
     positionHistory: [
       {
@@ -5417,8 +4894,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Rudrank S.",
-    emails: ["rsingh27@terpmail.umd.edu"],
-    discord: "rudymer",
     positionHistory: [
       {
         role: "Member",
@@ -5432,8 +4907,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Ryan K.",
-    emails: ["rkaplan6@terpmail.umd.edu"],
-    discord: "ryannn2733",
     positionHistory: [
       {
         role: "Member",
@@ -5447,8 +4920,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Saad A.",
-    emails: ["saad7@terpmail.umd.edu"],
-    discord: "younotsaad_07",
     positionHistory: [
       {
         role: "Developer",
@@ -5462,8 +4933,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sailee V.",
-    emails: ["savarde@terpmail.umd.edu"],
-    discord: "sailees",
     github: "Sailee",
     positionHistory: [
       {
@@ -5485,8 +4954,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Salman F. P.",
-    emails: ["pfarcy46@umd.edu"],
-    discord: "salmanfarcypeer",
     positionHistory: [
       {
         role: "Secondary Lead",
@@ -5501,8 +4968,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Samuel A.",
-    emails: ["samabram@terpmail.umd.edu"],
-    discord: "Dxrkxxz",
     github: "sam-abr",
     positionHistory: [
       {
@@ -5524,8 +4989,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Samuel M.",
-    emails: ["smerzel@terpmail.umd.edu"],
-    discord: "_theniel_#4033",
     github: "SammyMerz",
     positionHistory: [
       {
@@ -5548,8 +5011,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sana G.R.",
-    emails: ["sanagrao@gmail.com"],
-    discord: "koolest6797",
     positionHistory: [
       {
         role: "Member",
@@ -5557,15 +5018,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "BREAK",
-        supervisor: ["Faith C.", "fchang1@terpmail.umd.edu"],
+        supervisor: ["Faith C."],
         availability: { kind: "hoursUnknown", status: "BREAK" },
       },
     ],
   },
   {
     name: "Sarah D.",
-    emails: ["sdang124@terpmail.umd.edu"],
-    discord: "la_pandemonian",
     positionHistory: [
       {
         role: "Developer",
@@ -5586,8 +5045,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sarina P.",
-    emails: ["patels08@terpmail.umd.edu"],
-    discord: "spatel07",
     positionHistory: [
       {
         role: "Member",
@@ -5601,8 +5058,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Saurabh G.",
-    emails: ["sgujar@umd.edu"],
-    discord: "privateryan1717",
     positionHistory: [
       {
         role: "Member",
@@ -5617,8 +5072,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Savar T.",
-    emails: ["stoteja@umd.edu"],
-    discord: "savar_43131",
     github: "SavarToteja",
     positionHistory: [
       {
@@ -5640,8 +5093,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sean A.",
-    emails: ["akumatey@terpmail.umd.edu"],
-    discord: "seann_2000",
     github: "07sakumatey",
     positionHistory: [
       {
@@ -5664,8 +5115,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Selena L.",
-    emails: ["slu12821@umd.edu"],
-    discord: "o_o2059",
     github: "slu12821",
     positionHistory: [
       {
@@ -5681,8 +5130,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Shahbaz S.",
-    emails: ["ssatti@terpmail.umd.edu"],
-    discord: "slyxzy",
     positionHistory: [
       {
         role: "Developer",
@@ -5692,7 +5139,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Whale",
         cluster: "Caribbean",
-        supervisor: ["Brennen L.", "brennen.t.le@gmail.com"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -5707,8 +5154,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Shivani N.",
-    emails: ["nadella1@terpmail.umd.edu"],
-    discord: "reav3122",
     github: "jadeDiucon",
     positionHistory: [
       {
@@ -5730,8 +5175,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Shreeya G.",
-    emails: ["shreeyagupta103@gmail.com"],
-    discord: "happypanda84848",
     positionHistory: [
       {
         role: "Developer",
@@ -5741,7 +5184,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Cookiecutter",
         cluster: "Bering",
-        supervisor: ["Guillaume N. K.", "gnanfack@terpmail.umd.edu"],
+        supervisor: ["Guillaume N. K."],
         availability: { kind: "range", min: 6, max: 10, status: "INACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -5756,8 +5199,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Shreyas T.",
-    emails: ["shreyas.thirumale25@gmail.com", "shreyast@terpmail.umd.edu"],
-    discord: "solarsystem.123",
     positionHistory: [
       {
         role: "Resource Manager",
@@ -5786,8 +5227,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Shriya R.",
-    emails: ["srao1313@terpmail.umd.edu"],
-    discord: "srao13",
     positionHistory: [
       {
         role: "Member",
@@ -5808,8 +5247,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Siddanth V.",
-    emails: ["svinay1@terpmail.umd.edu"],
-    discord: "sidd_goat",
     github: "siddanthvinay",
     positionHistory: [
       {
@@ -5820,7 +5257,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Cookiecutter",
         cluster: "Bering",
-        supervisor: ["Guillaume N. K.", "gnanfack@terpmail.umd.edu"],
+        supervisor: ["Guillaume N. K."],
         availability: { kind: "range", min: 6, max: 10, status: "INACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -5835,8 +5272,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sidharth P.",
-    emails: ["sidponram@gmail.com"],
-    discord: "vaderai",
     positionHistory: [
       {
         role: "Advisor",
@@ -5856,8 +5291,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sidharth V.",
-    emails: ["sid.vallamsetty@gmail.com"],
-    discord: "ConsoleSid1369",
     positionHistory: [
       {
         role: "Member",
@@ -5871,8 +5304,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sitara C.",
-    emails: ["scsitara@gmail.com"],
-    discord: "pptarts",
     positionHistory: [
       {
         role: "Member",
@@ -5893,8 +5324,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sneha B.",
-    emails: ["sbalur@terpmail.umd.edu"],
-    discord: "sb4209",
     github: "sb1002",
     positionHistory: [
       {
@@ -5916,8 +5345,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sofia S.",
-    emails: ["ssantia1@terpmail.umd.edu"],
-    discord: "sofia_09592",
     positionHistory: [
       {
         role: "Member",
@@ -5931,8 +5358,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sohamm R.",
-    emails: ["srajput4@terpmail.umd.edu"],
-    discord: "sohammragjput",
     positionHistory: [
       {
         role: "Member",
@@ -5946,8 +5371,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Soma H.",
-    emails: ["hebbars@terpmail.umd.edu"],
-    discord: "pi3ngineergirlx",
     github: "pi3ngineergirlx",
     positionHistory: [
       {
@@ -5958,7 +5381,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Shortfin",
         cluster: "Caribbean",
-        supervisor: ["Averie A.", "averieahn@gmail.com"],
+        supervisor: ["Averie A."],
         availability: { kind: "lessThan", max: 1, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -5972,8 +5395,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Somil G.",
-    emails: ["somilsgupta@gmail.com"],
-    discord: "LazerSpoon",
     positionHistory: [
       {
         role: "Developer",
@@ -5981,7 +5402,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "BREAK",
-        supervisor: ["Faith C.", "fchang1@terpmail.umd.edu"],
+        supervisor: ["Faith C."],
         availability: { kind: "hoursUnknown", status: "BREAK" },
         proficiency: {
           frontEnd: 3,
@@ -5996,8 +5417,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sonaya D.",
-    emails: ["sdhuria@terpmail.umd.edu"],
-    discord: "sonaya_26964",
     positionHistory: [
       {
         role: "Member",
@@ -6011,8 +5430,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Spencer Z.",
-    emails: ["szheng25@terpmail.umd.edu"],
-    discord: "spend._7955",
     positionHistory: [
       {
         role: "Developer",
@@ -6033,8 +5450,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sreenesh A.",
-    emails: ["sallu@terpmail.umd.edu"],
-    discord: "sreenesh.allu",
     github: "sreenesh-allu",
     positionHistory: [
       {
@@ -6050,8 +5465,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Srihas I.",
-    emails: ["inaganti@terpmail.umd.edu"],
-    discord: "sib3r",
     positionHistory: [
       {
         role: "Resource Manager",
@@ -6067,15 +5480,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "External Operations",
         department: "Events",
-        supervisor: ["Brennen L.", "ble2005@terpmail.umd.edu"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Suhrudh C.",
-    emails: ["csuhrudh@gmail.com"],
-    discord: "shrub_06189",
     github: "SuhrudhC",
     positionHistory: [
       {
@@ -6114,8 +5525,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sulagna (Sula) D.",
-    emails: ["suladash@terpmail.umd.edu"],
-    discord: "sula_8",
     positionHistory: [
       {
         role: "Member",
@@ -6129,8 +5538,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Suneth R. G.",
-    emails: ["sramawi1@terpmail.umd.edu"],
-    discord: "suneth_98918",
     positionHistory: [
       {
         role: "Member",
@@ -6144,8 +5551,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Surya K.",
-    emails: ["skolluri@terpmail.umd.edu"],
-    discord: "suryakolluri",
     positionHistory: [
       {
         role: "Developer",
@@ -6155,7 +5560,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Hammerhead",
         cluster: "Caribbean",
-        supervisor: ["Raghav S.", "rsenthi2@terpmail.umd.edu"],
+        supervisor: ["Raghav S."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
         proficiency: {
           frontEnd: 2,
@@ -6169,8 +5574,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sydney L.",
-    emails: ["sluong@terpmail.umd.edu"],
-    discord: "Sydneyluong",
     positionHistory: [
       {
         role: "Member",
@@ -6184,8 +5587,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Sydney L.",
-    emails: ["sliu1221@terpmail.umd.edu"],
-    discord: "Squidney",
     positionHistory: [
       {
         role: "Member",
@@ -6199,8 +5600,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Tanay S.",
-    emails: ["tanay.samnani.25@gmail.com"],
-    discord: "tanaysam",
     github: "HandledShoe881",
     positionHistory: [
       {
@@ -6222,8 +5621,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Tanishk M.",
-    emails: ["tanishkmodi9@gmail.com"],
-    discord: "camocamper9",
     positionHistory: [
       {
         role: "Advisor",
@@ -6243,8 +5640,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Tanvi S.",
-    emails: ["tshah18@terpmail.umd.edu"],
-    discord: "tanvishah0662",
     positionHistory: [
       {
         role: "Member",
@@ -6258,8 +5653,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Tanya S.",
-    emails: ["tsingh22@terpmail.umd.edu"],
-    discord: "tanyas8920",
     positionHistory: [
       {
         role: "Developer",
@@ -6274,8 +5667,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Tara M.",
-    emails: ["taramurugesan0@gmail.com"],
-    discord: "t0ndo",
     positionHistory: [
       {
         role: "Member",
@@ -6289,8 +5680,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Thiru",
-    emails: ["thiru.seth@gmail.com"],
-    discord: "t_roo",
     positionHistory: [
       {
         role: "Member",
@@ -6304,8 +5693,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Thomas S.",
-    emails: ["tjschlinke@gmail.com"],
-    discord: "Zediic",
     positionHistory: [
       {
         role: "Developer",
@@ -6315,7 +5702,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Shortfin",
         cluster: "Caribbean",
-        supervisor: ["Averie A.", "averieahn@gmail.com"],
+        supervisor: ["Averie A."],
         availability: { kind: "range", min: 11, max: 15, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -6330,8 +5717,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Thuy N.",
-    emails: ["ttpnguyen04@gmail.com"],
-    discord: "bath8599",
     positionHistory: [
       {
         role: "Member",
@@ -6345,8 +5730,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Tyre B.",
-    emails: ["tbolton3@umd.edu"],
-    discord: "wompp",
     positionHistory: [
       {
         role: "Analyst",
@@ -6354,15 +5737,13 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Internal Operations",
         department: "Analytics",
-        supervisor: ["Brennen L.", "ble2005@terpmail.umd.edu"],
+        supervisor: ["Brennen L."],
         availability: { kind: "range", min: 1, max: 5, status: "ACTIVE" },
       },
     ],
   },
   {
     name: "Vedant S.",
-    emails: ["vedantsaran@gmail.com"],
-    discord: "ulps.",
     positionHistory: [
       {
         role: "Member",
@@ -6370,7 +5751,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Development Operations",
         department: "Quality Assurance",
-        supervisor: ["Gisele M.", "gsmathew@terpmail.umd.edu"],
+        supervisor: ["Gisele M."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
       },
       {
@@ -6385,8 +5766,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Vibhu S.",
-    emails: ["vibhu307@terpmail.umd.edu"],
-    discord: "vibhu2830",
     positionHistory: [
       {
         role: "Member",
@@ -6400,8 +5779,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Victor S.",
-    emails: ["vsorkin@terpmail.umd.edu"],
-    discord: ".victor_s",
     github: "victorsorkin",
     positionHistory: [
       {
@@ -6416,8 +5793,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Vikram N.",
-    emails: ["vikramn@terpmail.umd.edu"],
-    discord: "vikramthecoolkid",
     positionHistory: [
       {
         role: "Member",
@@ -6439,8 +5814,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Vishnu G.",
-    emails: ["vishnug@terpmail.umd.edu"],
-    discord: "fishnew",
     positionHistory: [
       {
         role: "Member",
@@ -6461,8 +5834,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Wonwoo C.",
-    emails: ["wchoi12@umd.edu"],
-    discord: "q_wxnwx",
     positionHistory: [
       {
         role: "Member",
@@ -6476,8 +5847,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Yaheli A.",
-    emails: ["azaniyaheli@gmail.com"],
-    discord: "jinx.ps",
     github: "yaheli-azani",
     positionHistory: [
       {
@@ -6486,7 +5855,7 @@ export const memberData: Membership[] = [
         startDate: new Date("2026-09-21"),
         operationsSector: "Passive Roster",
         department: "BREAK",
-        supervisor: ["Faith C.", "fchang1@terpmail.umd.edu"],
+        supervisor: ["Faith C."],
         availability: { kind: "hoursUnknown", status: "BREAK" },
         proficiency: { frontEnd: 3, backEnd: 1, design: 2, versionControl: 2 },
       },
@@ -6494,8 +5863,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Yashas J.",
-    emails: ["Yashas.jain2007@gmail.com"],
-    discord: "4see__",
     positionHistory: [
       {
         role: "Developer",
@@ -6516,8 +5883,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Yashwant P.",
-    emails: ["yashwant@terpmail.umd.edu"],
-    discord: "super_nova2007",
     positionHistory: [
       {
         role: "Member",
@@ -6531,8 +5896,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Yik Hin L.",
-    emails: ["ylau@terpmail.umd.edu"],
-    discord: "communeprism",
     github: "hl709",
     positionHistory: [
       {
@@ -6543,7 +5906,7 @@ export const memberData: Membership[] = [
         department: "Development",
         team: "Blue",
         cluster: "Caribbean",
-        supervisor: ["Erik J.", "ejohns37@terpmail.umd.edu"],
+        supervisor: ["Erik J."],
         availability: { kind: "range", min: 6, max: 10, status: "ACTIVE" },
         proficiency: {
           frontEnd: 3,
@@ -6558,8 +5921,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Yiqun D.",
-    emails: ["dengyiqun98@gmail.com"],
-    discord: "yiqund_43950",
     github: "Peterdyq",
     positionHistory: [
       {
@@ -6582,8 +5943,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Yuan Y.",
-    emails: ["yyin2029@terpmail.umd.edu"],
-    discord: "caroline8237",
     positionHistory: [
       {
         role: "Developer",
@@ -6604,8 +5963,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Yuchen S.",
-    emails: ["napfikrow@gmail.com"],
-    discord: "project_susquehanna",
     github: "WakabaMutsum1",
     positionHistory: [
       {
@@ -6628,8 +5985,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Yutika D.",
-    emails: ["ydeshpan@terpmail.umd.edu"],
-    discord: "yutikad",
     positionHistory: [
       {
         role: "Member",
@@ -6650,8 +6005,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Zachary L.",
-    emails: ["zluersen@terpmail.umd.edu"],
-    discord: "zachary074164",
     github: "zluersen",
     positionHistory: [
       {
@@ -6673,8 +6026,6 @@ export const memberData: Membership[] = [
   },
   {
     name: "Zoey T.",
-    emails: ["ztsai123@terpmail.umd.edu"],
-    discord: "elysum_41675",
     positionHistory: [
       {
         role: "Head",

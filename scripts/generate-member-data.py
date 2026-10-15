@@ -1,12 +1,23 @@
-"""Generate src/data/members/2026W39.ts from the Fall 26 Members sheet (CSV)."""
+"""Generate src/data/members/<version>.ts from the Fall 26 Members sheet (CSV).
+
+Usage: python3 scripts/generate-member-data.py <sheet.csv> src/data/members/2026W42.ts
+The version (ISO year + week) comes from the output filename; positions start
+on that week's Monday. Register a new version in src/data/members/index.ts.
+"""
 
 import csv
+import datetime
 import json
+import os
 import re
 import sys
 
-VERSION = "2026W39"
-START_DATE = "2026-09-21"  # Monday of ISO week 2026-W39
+VERSION = os.path.splitext(os.path.basename(sys.argv[2]))[0]
+_m = re.fullmatch(r"(\d{4})W(\d{2})", VERSION)
+if not _m:
+    sys.exit(f"output filename must look like 2026W42.ts, got {VERSION!r}")
+START_DATE = datetime.date.fromisocalendar(int(_m[1]), int(_m[2]), 1).isoformat()
+GENERATED_ON = datetime.date.today().isoformat()
 
 rows = list(csv.reader(open(sys.argv[1], encoding="utf-8")))
 warnings: list[str] = []
@@ -79,6 +90,7 @@ ROLE_CODES = {
     "SL": "Secondary Lead",
     "TL": "Team Lead",
     "H": "Head",
+    "SD": "Staff Developer",
     "HEAD": "Head",
     "M": "Member",
 }
@@ -110,6 +122,8 @@ def parse_role_token(tok: str):
     t = re.sub(r"\s*\(Development\)$", "", t)
     if re.fullmatch(r"[A-Za-z]+ H", t):  # e.g. "Marketing H" (a Head on the passive roster)
         return "Head", level
+    if re.fullmatch(r"[A-Za-z]+ PL", t):  # e.g. "Development PL" on the passive roster
+        return "Primary Lead", level
     if t.upper() in ROLE_CODES:
         return ROLE_CODES[t.upper()], level
     if t.lower() in ROLE_WORDS:
@@ -124,7 +138,6 @@ def parse_role_cell(raw: str):
     for d in re.findall(r"\(([A-Z]{1,3})\)", v):
         if d in ROLE_CODES:
             desired.append(ROLE_CODES[d])
-        # (SD) has no modeled role; skipped
     v = re.sub(r"\([A-Z]{1,3}\)", "", v)
     roles = []
     for tok in re.split(r"[,/]", v):
@@ -226,6 +239,13 @@ def flush(block, ctx):
         if any(r in ("Head", "Primary Lead", "Team Lead") for r, _ in roles):
             leader = e
             break
+    # Remember the department's Head across its later Role rows: Staff Developers
+    # report to the Head even when listed on a row that starts with a team's PL.
+    for e in entries:
+        roles, _ = parse_role_cell(e["role_raw"]) if ctx["kind"] not in ("advisory", "exec") else ([], [])
+        if any(r == "Head" for r, _ in roles):
+            ctx["head"] = e
+            break
 
     for e in entries:
         avail = parse_availability(e["avail_raw"], ctx["status"])
@@ -248,7 +268,8 @@ def flush(block, ctx):
             positions.append(p)
         else:
             if ctx["department"] == "Development" and ctx.get("team") is None and ctx["kind"] == "dept":
-                # "Whale + Angel PL" etc. duplicate the team blocks; keep only the Head
+                # "Whale + Angel PL" etc. duplicate the team blocks; keep the Head and
+                # the Staff Developers ("SD"), who sit directly under the Head.
                 if re.search(r"\bPL$", e["role_raw"]):
                     continue
             roles, desired = parse_role_cell(e["role_raw"])
@@ -263,8 +284,10 @@ def flush(block, ctx):
                     p["cluster"] = ctx["cluster"]
                 positions.append(p)
         for p in positions:
-            if leader is not None and leader is not e and ctx["kind"] not in ("advisory", "exec"):
-                p["supervisor"] = [leader["name"], leader["email"]]
+            boss = ctx.get("head", leader) if p["role"] == "Staff Developer" else leader
+            if boss is not None and boss is not e and ctx["kind"] not in ("advisory", "exec"):
+                # Contact details (emails, Discord) stay out of the published data.
+                p["supervisor"] = [boss["name"]]
             p["availability"] = avail
             if prof and p["role"] in ("Developer", "Designer", "Primary Lead", "Secondary Lead", "Team Lead", "Member") and (
                 ctx["department"] in ("Development", "Undergoing Processing", "Not In Discord", "BREAK", "INACTIVE")
@@ -397,11 +420,12 @@ out = [
     "",
     f"// Member data version {VERSION}.",
     "// Generated from the CCC Crew Formations [CREW-R] spreadsheet,",
-    '// "Fall 26 Members" sheet, on 2026-09-25.',
+    f'// "Fall 26 Members" sheet, on {GENERATED_ON}.',
     f"// Every position is current: it starts {START_DATE} and carries no endDate.",
     '// Experience level: "A."/"Assoc." prefixes map to Associate; every other',
     "// listing is Intermediate. Roles in parentheses become desiredRoles.",
-    "// Supervisor = the Head / Primary Lead / Team Lead listed in the same block.",
+    "// Supervisor = the Head / Primary Lead / Team Lead listed in the same block,",
+    "// by name only. Emails and Discord handles are not published.",
     "",
     f'export const MEMBER_DATA_VERSION = "{VERSION}";',
     "",
@@ -410,9 +434,6 @@ out = [
 for m in members:
     out.append("  {")
     out.append(f"    name: {json.dumps(m['name'])},")
-    out.append(f"    emails: {ts(m['emails'])},")
-    if m["discord"]:
-        out.append(f"    discord: {json.dumps(m['discord'])},")
     if m["github"]:
         out.append(f"    github: {json.dumps(m['github'])},")
     if m["desired"]:
@@ -428,7 +449,7 @@ for m in members:
             if k == "startDate":
                 out.append(f'        startDate: new Date("{START_DATE}"),')
             elif k == "supervisor":
-                out.append(f"        supervisor: [{json.dumps(pos[k][0])}, {json.dumps(pos[k][1])}],")
+                out.append(f"        supervisor: [{', '.join(json.dumps(x) for x in pos[k])}],")
             elif isinstance(pos[k], dict):
                 inner = ", ".join(f"{kk}: {json.dumps(vv)}" for kk, vv in pos[k].items())
                 out.append(f"        {k}: {{ {inner} }},")

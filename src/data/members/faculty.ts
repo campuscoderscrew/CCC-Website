@@ -6,7 +6,6 @@ import type { Membership } from "../hr-system-types";
 export const facultyData: Membership[] = [
   {
     name: "Dr. James Purtilo",
-    emails: [],
     portfolio: "https://seam.cs.umd.edu/purtilo/",
     positionHistory: [
       {

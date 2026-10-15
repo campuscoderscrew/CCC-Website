@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import MembersTabs from "../components/MembersTabs";
-import { memberData } from "../data/members/2026W39";
+import { latestMemberData, memberDataVersions } from "../data/members";
 import { facultyData } from "../data/members/faculty";
 import { portfolioFor } from "../data/members/portfolios";
 import { currentPositions, formatRole } from "../data/hr-system-types";
-import type { Position, Role } from "../data/hr-system-types";
+import type { Membership, Position, Role } from "../data/hr-system-types";
 
 /* ------------------------------------------------------------------ layout */
 
@@ -90,6 +91,7 @@ const ROLE_ORDER: Role[] = [
   "President",
   "Vice President",
   "Head",
+  "Staff Developer",
   "Primary Lead",
   "Secondary Lead",
   "Team Lead",
@@ -163,7 +165,7 @@ function makeNode(id: string, label: string, kind: Kind): TreeNode {
   };
 }
 
-function buildTree(): TreeNode {
+function buildTree(memberData: Membership[]): TreeNode {
   const root = makeNode("root", "Campus Coders Crew", "root");
   const index = new Map<string, TreeNode>([["root", root]]);
 
@@ -309,8 +311,19 @@ const clamp = (value: number, lo: number, hi: number) =>
   Math.min(hi, Math.max(lo, value));
 
 export default function Members() {
+  /* ?week=2026W39 picks a roster; no param (or an unknown one) shows the latest */
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selected =
+    memberDataVersions.find((v) => v.version === searchParams.get("week")) ??
+    latestMemberData;
+  const selectWeek = (version: string) =>
+    setSearchParams(
+      version === latestMemberData.version ? {} : { week: version },
+      { replace: true }
+    );
+
   const { root, nodes, width, height, total } = useMemo(() => {
-    const tree = buildTree();
+    const tree = buildTree(selected.memberData);
     measure(tree);
     place(tree, 0, 0);
     const all = flatten(tree);
@@ -321,9 +334,17 @@ export default function Members() {
       height: Math.max(...all.map((n) => n.bottom)),
       total: all.reduce((sum, n) => sum + n.cards.length, 0),
     };
-  }, []);
+  }, [selected]);
 
   const viewportRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  /*
+   * Top of the usable canvas: just below the title, tabs and week picker.
+   * Measured, because the week picker wraps onto its own row on phones.
+   * The scrim's last 40px (pb-10) is a fade the chart may sit under.
+   */
+  const headerInset = () => (headerRef.current?.offsetHeight ?? 230) - 34;
   const [view, setView] = useState<View>({ x: 0, y: 0, k: MIN_SCALE });
 
   const fit = useCallback(() => {
@@ -331,7 +352,7 @@ export default function Members() {
     if (!element) return;
     const { clientWidth: vw, clientHeight: vh } = element;
     /* leave room for the fixed navbar and the page title above the canvas */
-    const inset = 190;
+    const inset = headerInset();
     const usableH = Math.max(120, vh - inset - 24);
     const k = clamp(
       Math.min(vw / (width || 1), usableH / (height || 1)) * 0.94,
@@ -354,7 +375,7 @@ export default function Members() {
     if (!element) return;
     if (element.clientWidth >= 640) return fit();
     const k = 0.7;
-    setView({ x: element.clientWidth / 2 - root.cx * k, y: 190, k });
+    setView({ x: element.clientWidth / 2 - root.cx * k, y: headerInset(), k });
   }, [fit, root]);
 
   useEffect(initialView, [initialView]);
@@ -480,6 +501,7 @@ export default function Members() {
       <main className="h-dvh w-full overflow-hidden bg-[#193463]">
         {/* Header scrim: keeps the title readable as the chart pans beneath it. */}
         <div
+          ref={headerRef}
           className="pointer-events-none absolute inset-x-0 top-0 z-30 px-4 pb-10 pt-[76px] text-center"
           style={{
             background:
@@ -489,9 +511,35 @@ export default function Members() {
           <h1 className="text-2xl font-bold text-white sm:text-3xl">
             Organization Chart
           </h1>
-          <MembersTabs className="pointer-events-auto mt-2" />
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-2">
+            <MembersTabs className="pointer-events-auto" />
+            <label className="pointer-events-auto relative inline-flex items-center">
+              <span className="sr-only">Roster week</span>
+              <select
+                value={selected.version}
+                onChange={(event) => selectWeek(event.target.value)}
+                className="cursor-pointer appearance-none rounded-xl bg-white/10 py-2.5 pl-4 pr-9 text-sm font-bold
+                  text-white outline-none transition-colors duration-200 hover:bg-white/15
+                  focus-visible:ring-2 focus-visible:ring-white/70"
+              >
+                {memberDataVersions.map((v, i) => (
+                  <option key={v.version} value={v.version} className="text-[#193463]">
+                    {v.label}
+                    {i === 0 ? " (current)" : ""}
+                  </option>
+                ))}
+              </select>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 20 20"
+                className="pointer-events-none absolute right-3 h-4 w-4 fill-white/80"
+              >
+                <path d="M5.2 7.2a1 1 0 0 1 1.4 0L10 10.6l3.4-3.4a1 1 0 1 1 1.4 1.4l-4.1 4.1a1 1 0 0 1-1.4 0L5.2 8.6a1 1 0 0 1 0-1.4Z" />
+              </svg>
+            </label>
+          </div>
           <p className="mt-1 text-sm text-white/70">
-            {total} current positions across {root.children.length} sectors —
+            {total} positions across {root.children.length} sectors —
             drag to move, <span className="max-sm:hidden">scroll or </span>
             pinch to zoom.
           </p>
