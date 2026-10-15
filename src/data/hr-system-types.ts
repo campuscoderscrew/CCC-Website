@@ -33,6 +33,7 @@ export type Role =
   | "Secondary Lead"
   | "Team Lead"
   // Development Operations
+  | "Staff Developer" // "SD": sits directly under the Development Head, not on a team
   | "Developer"
   | "Designer"
   | "QA Analyst"
@@ -212,16 +213,17 @@ export type TeamNames =
 /**
  * Position
  */
-// Identifies the supervising member: their name, then their primary email.
+// Identifies the supervising member by name. Contact details (emails, Discord
+// handles) are deliberately kept out of the published site data.
 //
 // TODO: this is a denormalized copy, not a reference. Nothing links it back to
-// the supervising Membership, so if that member's name or primary email changes,
+// the supervising Membership, so if that member's name changes,
 // every Position pointing at them silently goes stale.
 //
-// Until that is fixed, any rename or email change must sweep every member's
+// Until that is fixed, any rename must sweep every member's
 // positionHistory and update the matching supervisor entries. Longer term,
-// store the supervisor's member id here and resolve name/email at read time.
-export type SupervisorRef = [name: string, email: string];
+// store the supervisor's member id here and resolve the name at read time.
+export type SupervisorRef = [name: string];
 
 // A position held by a member over some period, and where it sits in the org.
 // endDate is absent while the position is currently held.
@@ -251,8 +253,9 @@ export interface Membership {
   name: string;
   desiredRoles?: Role[]; // Roles written in parentheses in sheet
   positionHistory: Position[]; // Every position held; current ones have no endDate
-  discord?: string;
-  emails: string[];
+  discord?: string; // Not included in the website's member data (public)
+  // Not included in the website's member data (src/data/members), which is public.
+  emails?: string[];
   github?: string;
   portfolio?: string; // Personal site, opened from the org chart
   joinDate?: Date;
