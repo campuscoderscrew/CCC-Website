@@ -74,6 +74,16 @@ export const resourceGroups: ResourceGroup[] = [
     ],
   },
   {
+    title: "Concessions",
+    sections: [
+      {
+        items: [
+          r("CCC Concessions Training", "concessions-training", "folder", "PUBLIC"),
+        ],
+      },
+    ],
+  },
+  {
     title: "Interest Meeting RSVPs",
     sections: [
       {
