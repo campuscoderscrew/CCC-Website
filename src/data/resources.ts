@@ -20,7 +20,7 @@ export type DocTag =
   | "PUBLIC-W"
   | "PUBLIC-R";
 
-export type ResourceKind = "doc" | "sheet" | "folder" | "form";
+export type ResourceKind = "doc" | "sheet" | "folder" | "form" | "repo";
 
 export interface Resource {
   label: string;
@@ -79,6 +79,16 @@ export const resourceGroups: ResourceGroup[] = [
       {
         items: [
           r("CCC Concessions Training", "concessions-training", "folder", "PUBLIC"),
+        ],
+      },
+    ],
+  },
+  {
+    title: "Workshops",
+    sections: [
+      {
+        items: [
+          r("HTML & CSS Practice (Technica 2026)", "html-css-practice", "repo", "PUBLIC"),
         ],
       },
     ],

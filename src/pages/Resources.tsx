@@ -3,6 +3,7 @@ import {
   FaExternalLinkAlt,
   FaFileAlt,
   FaFolder,
+  FaGithub,
   FaTable,
   FaWpforms,
 } from "react-icons/fa";
@@ -21,6 +22,7 @@ const KIND_ICON: Record<ResourceKind, IconType> = {
   sheet: FaTable,
   folder: FaFolder,
   form: FaWpforms,
+  repo: FaGithub,
 };
 
 const TAG_STYLE: Record<DocTag, string> = {
