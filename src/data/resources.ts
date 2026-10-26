@@ -94,6 +94,21 @@ export const resourceGroups: ResourceGroup[] = [
     ],
   },
   {
+    title: "Events",
+    sections: [
+      {
+        items: [
+          r(
+            "10/28/26 Campus Coders Crew x Open Sourcery Halloween Mixer",
+            "10-28-26",
+            "form",
+            "PUBLIC"
+          ),
+        ],
+      },
+    ],
+  },
+  {
     title: "Interest Meeting RSVPs",
     sections: [
       {

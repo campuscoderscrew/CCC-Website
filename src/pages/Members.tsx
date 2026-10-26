@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
-import MembersTabs from "../components/MembersTabs";
 import { latestMemberData, memberDataVersions } from "../data/members";
 import { facultyData } from "../data/members/faculty";
 import { portfolioFor } from "../data/members/portfolios";
@@ -512,7 +511,6 @@ export default function Members() {
             Organization Chart
           </h1>
           <div className="mt-2 flex flex-wrap items-center justify-center gap-2">
-            <MembersTabs className="pointer-events-auto" />
             <label className="pointer-events-auto relative inline-flex items-center">
               <span className="sr-only">Roster week</span>
               <select
