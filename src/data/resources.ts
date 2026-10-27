@@ -78,6 +78,7 @@ export const resourceGroups: ResourceGroup[] = [
     sections: [
       {
         items: [
+          r("CCC 10/31/26 Concessions Sign Up", "10-31-26", "form"),
           r("CCC Concessions Training", "concessions-training", "folder", "PUBLIC"),
         ],
       },
@@ -89,6 +90,21 @@ export const resourceGroups: ResourceGroup[] = [
       {
         items: [
           r("HTML & CSS Practice (Technica 2026)", "html-css-practice", "repo", "PUBLIC"),
+        ],
+      },
+    ],
+  },
+  {
+    title: "Events",
+    sections: [
+      {
+        items: [
+          r(
+            "10/28/26 Campus Coders Crew x Open Sourcery Halloween Mixer",
+            "10-28-26",
+            "form",
+            "PUBLIC"
+          ),
         ],
       },
     ],

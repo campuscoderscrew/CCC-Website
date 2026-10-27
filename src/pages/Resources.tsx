@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa";
 
 import Navbar from "../components/Navbar";
-import MembersTabs from "../components/MembersTabs";
 import {
   resourceGroups,
   type DocTag,
@@ -80,7 +79,6 @@ export default function Resources() {
         <div className="mx-auto max-w-5xl">
           <header className="flex flex-col items-center gap-3 text-center">
             <h1 className="text-2xl font-bold sm:text-3xl">Resources</h1>
-            <MembersTabs />
             <p className="m-0 max-w-xl text-sm text-white/70">
               Shortcuts to CCC documents, logs, and folders. Tags show who can
               open a document; untagged links need a CCC account.

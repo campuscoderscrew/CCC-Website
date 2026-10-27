@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, useLocation, Routes, Route } from "react-router";
+import { BrowserRouter, useLocation, Routes, Route, Navigate } from "react-router";
 
 import Home from "./pages/Home";
 
@@ -33,7 +33,9 @@ export default function App() {
         <Route path="projects" element={<Projects />} />
         <Route path="requests" element={<Requests />} />
         <Route path="apply" element={<Apply />} />
-        <Route path="members" element={<Members />} />
+        {/* Members defaults to Resources; the org chart has its own sub-route. */}
+        <Route path="members" element={<Navigate to="/members/resources" replace />} />
+        <Route path="members/org-chart" element={<Members />} />
         <Route path="members/resources" element={<Resources />} />
         {/* Catch-all. Must stay last. */}
         <Route path="*" element={<NotFound />} />
