@@ -82,6 +82,10 @@
     "html-css-practice": "https://github.com/campuscoderscrew/html-css-practice"
   },
 
+  "templates": {
+    "tech-spc-claude-prompt-template": "https://docs.google.com/document/d/19ZlOLOu1ws9KzO5xInRH7rQLzYLFcH7O-IeWfh_myj8/edit?usp=sharing"
+  },
+
   "onboarding": {
     "development-onboarding": "https://docs.google.com/document/d/e/2PACX-1vTJkI4RJ_p9DMPw8rNFeS74r71bt3AHGSGFvmtBIoYrnzz1_kdKOb2aM-Y51q70B8TtGgmkcdmp3SF0/pub"
   },
