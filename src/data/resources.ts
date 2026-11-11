@@ -68,7 +68,7 @@ export const resourceGroups: ResourceGroup[] = [
       {
         items: [
           r("Development Onboarding", "development-onboarding", "doc", "PUBLIC"),
-          r("CCC Technical Spec Prompt", "tech-spc-claude-prompt-template", "doc", "PUBLIC"),
+          r("CCC Technical Spec Prompt", "tech-spec-claude-prompt-template", "doc", "PUBLIC"),
           r("CCC General Directory", "drive", "folder"),
         ],
       },

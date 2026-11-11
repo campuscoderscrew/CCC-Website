@@ -83,7 +83,7 @@
   },
 
   "templates": {
-    "tech-spc-claude-prompt-template": "https://docs.google.com/document/d/19ZlOLOu1ws9KzO5xInRH7rQLzYLFcH7O-IeWfh_myj8/edit?usp=sharing"
+    "tech-spec-claude-prompt-template": "https://docs.google.com/document/d/19ZlOLOu1ws9KzO5xInRH7rQLzYLFcH7O-IeWfh_myj8/edit?usp=sharing"
   },
 
   "onboarding": {
