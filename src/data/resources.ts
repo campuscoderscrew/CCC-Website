@@ -79,6 +79,7 @@ export const resourceGroups: ResourceGroup[] = [
     sections: [
       {
         items: [
+          r("CCC 11/14/26 Concessions Sign Up", "11-14-26", "form", "PUBLIC"),
           r("CCC 10/31/26 Concessions Sign Up", "10-31-26", "form"),
           r("CCC Concessions Training", "concessions-training", "folder", "PUBLIC"),
         ],
