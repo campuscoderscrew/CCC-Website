@@ -102,6 +102,12 @@ export const resourceGroups: ResourceGroup[] = [
       {
         items: [
           r(
+            "11/24/26 CCC x Open Sourcery Advanced Git Workshop",
+            "11-24-26",
+            "form",
+            "PUBLIC"
+          ),
+          r(
             "10/28/26 Campus Coders Crew x Open Sourcery Halloween Mixer",
             "10-28-26",
             "form",
